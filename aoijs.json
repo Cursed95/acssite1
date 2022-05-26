@@ -1,0 +1,366 @@
+[
+    {
+        "kodlar": {
+            "fkb0MH1MKN": {
+                "id": "fkb0MH1MKN",
+                "isim": "V5 Bot Bilgisi",
+                "bilgi": "Botun Anlık Bilgilerini Verir.",
+                "kod": "\nmodule.exports = {\r\nname:\"bot-bilgisi\",\r\ncode:`\r\n$author[1;Bot İstatistikleri;$userAvatar[$clientID]\r\n$description[1;\r\n**Botun Sahibi**: <@$botOwnerID>\r\n\r\n**Botun Pingi**: \\`$ping ms\\`\r\n\r\n**Kütüphane Sürümü**: \\`$nodeVersion\\`\r\n\r\n**Aoijs Sürümü**: \\`$packageVersion\\`\r\n\r\n**Komut Sayısı**: \\`$commandsCount\\`\r\n\r\n**Kanal Sayısı**: \\`$allChannelsCount\\`\r\n\r\n**Kullanıcı Sayısı**:  \\`$allMembersCount\\`\r\n\r\n**Sunucu Sayısı**: \\`$serverCount\\`]\r\n$color[1;RANDOM]\r\n$footer[1;$userName Kullandı;$userAvatar[$authorID]]\r\n$addTimestamp[1;$dateStamp] \r\n\r\n`} \r\n",
+                "rank": "aoijs",
+                "dcisim": "Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "WDbzZ9ZDFt": {
+                "id": "WDbzZ9ZDFt",
+                "isim": "V5 Kullanıcı Bilgi",
+                "bilgi": "Etiketlenen Kullanıcı Hakkında Bilgiler Verir.",
+                "kod": "\nmodule.exports = ({\r\nname: \"profil\",\r\naliases:\"kullanıcı-bilgi\",\r\ncode:\r\n`\r\n$color[1;RANDOM]\r\n$thumbnail[1;$userAvatar[$mentioned[1;yes]]]\r\n$author[1;Bilgileriniz;$userAvatar[$mentioned[1;yes]]]\r\n$description[1;\r\n**Kullanıcı İsmi**\r\n\\`$username[$mentioned[1;yes]]\\`\r\n\r\n**Kullanıcı Etiketi**\r\n\\`#$discriminator[$mentioned[1;yes]]\\`\r\n\r\n**Hesap Tarihi**\r\n\\`$creationDate[$mentioned[1;yes];date]\\`\r\n\r\n**Sunucudaki Rolleri**\r\n$userRoles[$mentioned[1;yes];$guildID;mention;,]]\r\n` \r\n} \r\n",
+                "rank": "aoijs",
+                "dcisim": "Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "BakZ55UW52": {
+                "id": "BakZ55UW52",
+                "isim": "V5 Sunucu Bilgi",
+                "bilgi": "Komutun Kullanıldığı Sunucunun Bilgilerini Atar.",
+                "kod": "\nmodule.exports = {\r\nname:\"sunucu-bilgi\",\r\ncode:`\r\n$thumbnail[1;$serverIcon]\r\n$color[1;RANDOM]\r\n$author[1;$servername Bilgileri;$serverIcon]\r\n$description[1;\r\n**Üye Sayısı**\r\n\\`$membersCount\\`\r\n\r\n**Kanal Sayısı**\r\n\\`$channelCount\\`\r\n\r\n**Sunucu ID** \r\n\\`$guildID\\`\r\n\r\n**Sunucu Sahibi**\r\n<@$ownerID>\r\n\r\n**Rol Sayısı**\r\n\\`$roleCount\\`\r\n\r\n**Roller**\r\n$guildRoles\r\n`} \r\n",
+                "rank": "aoijs",
+                "dcisim": "! Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "BscT4muxwb": {
+                "id": "BscT4muxwb",
+                "isim": "V5 Say",
+                "bilgi": "Ufak Çaplı, Sunucu İstatistik Verisini Atar.",
+                "kod": "\nmodule.exports = {\r\nname:\"say\",\r\ncode:`\r\n$author[1;İSTATİSTİKLERİMİZ;$serverIcon]\r\n$description[1;\r\n\r\n\\`•\\` **Sunucumuzda Toplam** \\`$membersCount\\` **Kişi Bulunmakta**\r\n\r\n\\`•\\` **Sunucumuzda Toplam** \\`$math[$membersCount-$membersCount[$guildID;offline]]\\` **Aktif Üye Bulunmakta**\r\n\r\n\\`•\\` **Sunucumuza Toplam** \\`$serverBoostCount\\` **Takviye Yapılmış**]\r\n`} \r\n",
+                "rank": "aoijs",
+                "dcisim": "! Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "ZXCH4B6mo7": {
+                "id": "ZXCH4B6mo7",
+                "isim": "V5 Sil",
+                "bilgi": "Belirtilen Miktarda Mesajı Siler.",
+                "kod": "\nmodule.exports = {\r\n   name: \"sil\",\r\n   code: `\r\n \r\n    $clear[$message[1]]\r\n    $onlyPerms[managemessages;Bu komutu kullanmak için ”Mesajları Yönet“ yetkisine sahip olman gerek.]\r\n    **$message** adet mesaj başarıyla havaya uçuruldu! ☑️\r\n     $onlyIf[$isNumber[$message[1]]!=false;Lütfen sileceğin mesaj miktarını gir. 🔴]\r\n$deleteIn[3s]\r\n`}  \r\n\r\nkomutlar/sil.js",
+                "rank": "aoijs",
+                "dcisim": "! Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "O1SoPWAgSL": {
+                "id": "O1SoPWAgSL",
+                "isim": "V5 Ping",
+                "bilgi": "Botun Pingini Ölçer.",
+                "kod": "\nmodule.exports = {\r\nname: \"ping\",\r\ncode:`\r\n$title[1;Ping]\r\n$description[1;**Benim Pingim Tam Olarak \\`$ping\\`'dir**]\r\n$thumbnail[1;$authorAvatar]\r\n$color[1;RANDOM]\r\n`\r\n} ",
+                "rank": "aoijs",
+                "dcisim": "! Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "FC1bghmtwX": {
+                "id": "FC1bghmtwX",
+                "isim": "V5 Avatar",
+                "bilgi": "Etiketlenen Kullanıcının Profil Fotoğrafinı Atar.",
+                "kod": "\nmodule.exports = {\r\nname:\"avatar\",\r\naliases:[\"pp\",\"av\"],\r\ncode:`\r\n$description[1;İşte avatar]\r\n$image[1;$userAvatar[$mentioned[1;yes]]]\r\n$footer[1;$userTag tarafından istendi]\r\n`\r\n}  \r\n",
+                "rank": "aoijs",
+                "dcisim": "! Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "kG9bJwmycJ": {
+                "id": "kG9bJwmycJ",
+                "isim": "V5 Ayarlamasız Buton Rol",
+                "bilgi": "ID'si Ayarlanan Rolü Butona Tıklandığında Verir.",
+                "kod": "\nmodule.exports = {\r\n  name: \"buton\",\r\n  code: `\r\n$color[1;RANDOM]\r\n$description[1;**<@&944584591308623872> | Rolünü Almak İçin Aşşagıdaki Butona Basmalısın**\r\n$addButton[1;Rolü Almak İçin Tıkla;1;buton;no;🤝]\r\n`,\r\n}  \r\n\r\nkomutlar/butonrol.js\r\n\r\nMaine Atılacak;\r\nbot.interactionCommand({\r\n  name: \"buton\",\r\n  type: \"interaction\",\r\n  prototype: \"button\",\r\n  code: `\r\n    $interactionReply[<@&944584591308623872> rolü verildi;;;;;yes]\r\n    $giveRole[$guildID;$authorID;944584591308623872] \r\n  \r\n`,\r\n});  ",
+                "rank": "aoijs",
+                "dcisim": "! Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "5wKQPOinuo": {
+                "id": "5wKQPOinuo",
+                "isim": "V5 Balık Tut",
+                "bilgi": "Balık tutarsınız (Eğlence Kodudur)",
+                "kod": "\nmodule.exports = {\r\nname: \"balıktut\",\r\ncode: `$author[1;Balık Tuttun;$userAvatar]\r\n$thumbnail[1;$userAvatar]\r\n$description[1;$username, $randomText[ Hamsi 🐟;Ahtapot 🐙;Timsah 🐊;Balon Balığı🐡;Tropik Balık 🐠] Yakaladın.]\r\n$color[1;RANDOM]\r\n$footer[1;Balıkçı;$userAvatar] `} \r\n",
+                "rank": "aoijs",
+                "dcisim": "! Pakrez¿",
+                "date": "5/6/2022"
+            },
+            "qAtaFPCbl8": {
+                "id": "qAtaFPCbl8",
+                "isim": "V5 Sayaçlı Otorol ",
+                "bilgi": "Aoijs v5 ayarlamasız sayaçlı otorol idleri girin",
+                "kod": "\nbot.joinCommand({\r\n  channel: \"GİRİŞ LOG ID\",\r\n  code: `\r\n$color[1;BLACK]\r\n$author[1;$serverName;$serverIcon]\r\n$thumbnail[1;$userAvatar[$authorID]]\r\n$giveRole[$guildID;$authorID;ROL ID]\r\n$description[1;\r\n**[$userTag[$authorID]](https://discord.com/users/$authorID) Sunucumuza Hoşgeldin Seninle Beraber $membersCount Kişiyiz Başarıyla <@&ROL ID> Rolünü Verdim**]\r\n$footer[1;$userTag;$userAvatar[$authorID]]\r\n$suppressErrors\r\n`,\r\n});\r\nbot.onJoin()\r\n\r\nbot.leaveCommand({\r\nchannel:\"AYRILMA LOG ID\",\r\ncode:`\r\n$color[1;BLACK]\r\n$author[1;$serverName;$serverIcon]\r\n$thumbnail[1;$userAvatar[$authorID]]\r\n$description[1;\r\n**[$userTag[$authorID]](https://discord.com/users/$authorID) Adlı Kullanıcı Sunucumuzdan Ayrıldı $membersCount Kişi Kaldık**]\r\n$footer[1;$userTag;$userAvatar[$authorID]]\r\n$suppressErrors\r\n`,});\r\nbot.onLeave() \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "6waSJnJHBh": {
+                "id": "6waSJnJHBh",
+                "isim": "V5 Ban",
+                "bilgi": "Aoijs v5 Ban",
+                "kod": "\nmodule.exports = {\r\n  name: \"ban\",\r\n  code: `\r\n$ban[$message[1]]\r\n$onlyPerms[ban;Bu komutu kullanmak için ”Kullanıcıları Yasakla“ yetkisine sahip olman lazım.]\r\n$argsCheck[>1;Yasaklayacağın kişiyi etiketleyerek tekrar dene! ❌]\r\n$footer[1;Angel Code]\r\n$addTimestamp[1;$datesTamp]\r\n$description[1;\r\nKullanıcıyı Yasaklayan: $userTag[$authorID],\r\nYasaklanan Kullanıcı: $userTag[$mentioned[1]]\r\n$color[1;RANDOM]\r\n`,\r\n} ;  \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "FtPQ4sXSrl": {
+                "id": "FtPQ4sXSrl",
+                "isim": "V5 Unban",
+                "bilgi": "Aoijs v5 unban",
+                "kod": "\nmodule.exports = {\r\n  name: \"unban\",\r\n  code: `\r\n\r\n$unban[$message]\r\n$thumbnail[1;$userAvatar[$message[1]]\r\n$author[1;Unban;$userAvatar]\r\n$description[1;\r\n> **Banı kaldırılan kişi: <@!$message[1]>**\r\n> **Banı kaldıran kişi**: <@!$authorID>\r\n]\r\n$color[1;RANDOM]\r\n$footer[1;Flora Code;$userAvatar]\r\n$addTimestamp[1;$datesTamp]\r\n$argsCheck[1;Lütfen ID girin.]\r\n$onlyPerms[ban;❎ **Bu komutu kullanmaya yetkin yok.**]\r\n`\r\n}  \r\n\r\nkomutlar/unban.js",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "FGVrAg01RA": {
+                "id": "FGVrAg01RA",
+                "isim": "V5 Yatır Çek ",
+                "bilgi": "Aoijs v5 para yatırma çekme kodu",
+                "kod": "\nbot.command({\r\n  name: \"çek-hepsi\",\r\n  code: `\r\n$setGlobalUserVar[banka;$sub[$getGlobalUserVar[banka;$authorID];$getGlobalUserVar[banka;$authorID]];$authorID]\r\n$setGlobalUserVar[para;$sum[$getGlobalUserVar[para;$authorID];$getGlobalUserVar[banka;$authorID]];$authorID]\r\n$color[1;RANDOM]\r\n$author[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$description[1;\r\n**Başarıyla \\`$numberSeparator[$getGlobalUserVar[banka;$authorID];,]\\` Miktarında Para Cüzdana Çekildi**]\r\n$footer[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$suppressErrors\r\n`,\r\n}); \r\n\r\n\r\nbot.command({\r\n  name: \"yatır-hepsi\",\r\n  code: `\r\n$setGlobalUserVar[para;$sub[$getGlobalUserVar[para;$authorID];$getGlobalUserVar[para;$authorID]];$authorID]\r\n$setGlobalUserVar[banka;$sum[$getGlobalUserVar[banka;$authorID];$getGlobalUserVar[para;$authorID]];$authorID]\r\n$color[1;RANDOM]\r\n$author[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$description[1;\r\n**Başarıyla \\`$numberSeparator[$getGlobalUserVar[para;$authorID];,]\\` Miktarında Para Bankaya Yatırıldı**]\r\n$footer[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$suppressErrors\r\n`,\r\n});  \r\n\r\n\r\nbot.variables({\r\nbanka:\"0\",\r\npara:\"0\"\r\n})​ \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "5kdkPHO3nl": {
+                "id": "5kdkPHO3nl",
+                "isim": "V5 Yazdır ",
+                "bilgi": "Aoijs v5 yazdır kodudur",
+                "kod": "\nmodule.exports = {\r\nname:\"yazdır\",\r\ncode:`\r\n$thumbnail[1;$userAvatar]\r\n$author[1;İşte Yazınız;$userAvatar]\r\n$description[1;**$noMentionMessage**]\r\n$color[1;RANDOM]\r\n$footer[1;$username Yazdırdı;$userAvatar]\r\n$addTimestamp[1;$datesTamp]`} \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "aP7CayecOs": {
+                "id": "aP7CayecOs",
+                "isim": "V5 İD Rol-Al Rol-Ver",
+                "bilgi": "Aoijs v5 id ile rol alıp verirsiniz maine atılıcak",
+                "kod": "\nbot.command({\r\n  name: \"rol-al\",\r\n  code: `\r\n$takeRole[$guildID;mentioned[1];$noMentionMessage]\r\n$color[1;RANDOM]\r\n$author[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$thumbnail[1;$userAvatar[$mentioned[1]]]\r\n$description[1;\r\n** \\`$userTag[$authorID]\\` Başarıyla \\`$userTag[$mentioned[1]]\\` Kişisinden <@&$noMentionMessage> Rolü Aldım**1\r\n]\r\n$onlyPerms[manageroles;**Bu Komutu Kullanmak İçin \\`Rolleri Yönet\\` İznin Olmalı**]\r\n$suppressErrors[1;]\r\n\r\n\r\n\r\n`,\r\n}); \r\n\r\nMaine\r\n\r\nbot.command({\r\n  name: \"rol-ver\",\r\n  code: `\r\n$giveRole[$guildID;$mentioned[1];$noMentionMessage]\r\n$color[1;RANDOM]\r\n$author[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$thumbnail[1;$userAvatar[$mentioned[1]]]\r\n$description[1;\r\n** \\`$userTag[$authorID]\\` Başarıyla \\`$userTag[$mentioned[1]]\\` Kişisine <@&$noMentionMessage> Rolünü Verdim**\r\n]\r\n$onlyPerms[manageroles;**Bu Komutu Kullanmak İçin \\`Rolleri Yönet\\` İznin Olmalı**]\r\n$suppressErrors[1;]\r\n\r\n\r\n\r\n`,\r\n}); \r\n\r\nMaine",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "TE08dtUjPi": {
+                "id": "TE08dtUjPi",
+                "isim": "V5 Türk Ölçer ",
+                "bilgi": "Aoijs v5 Türk Ölçer Eğlence Kodudur",
+                "kod": "\nmodule.exports = {\r\n  name: \"türk\",\r\n  aliases: \"türk\",\r\n  code: `\r\n$color[1;RANDOM]\r\n$author[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$description[1;🇹🇷・<@$authorID>  **%$random[1;100]** Türk]\r\n$footer[1;$username Tarafından Kullanıldı;$userAvatar[$authorID]]\r\n$addReactions[🇹🇷]\r\n\r\n`,\r\n}; \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "b9R9CE1wSw": {
+                "id": "b9R9CE1wSw",
+                "isim": "V5 Bot Destek",
+                "bilgi": "Aoijs v5 Kod Kullanıldığında Bot Sahibine Dm Gider",
+                "kod": "\nmodule.exports = {\r\n  name: \"destek\",\r\n  code: `\r\n$dm[$botOwnerID]\r\n$color[1;RANDOM]\r\n$author[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$description[1;**$userTag[$authorID] İsimli Kullanıcı \\`$message[1]\\` Sebebinden Destek İstedi.**]\r\n$channelSendMessage[$channelID;**・<@$authorID> Destek Mesajınız Geliştiricime İletilmiştir En Yakın Zamanda Size Geri Dönüş Yapacaktır.**]\r\n$argsCheck[1;**・<@$authorID> Bir Mesaj Belirtmelisin.**] \r\n  `,\r\n}; \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "i3NsKiigui": {
+                "id": "i3NsKiigui",
+                "isim": "V5 Gay Ölçer ",
+                "bilgi": "Aoijs v5 Gay Ölçer Eğlence Kodudur ",
+                "kod": "\nmodule.exports = {\r\n  name: \"gay\",\r\n  code: `\r\n$author[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;\r\n**$userTag[$authorID] Sen \\`%$random[1;100]\\` Gay'sin**\r\n]\r\n$addReactions[🌝]\r\n\r\n`,\r\n}; \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "F5zQzEAfKe": {
+                "id": "F5zQzEAfKe",
+                "isim": "V5 Nuke",
+                "bilgi": "Aoijs v5 nuke kodudur kanalı klonlar",
+                "kod": "\nmodule.exports = {\r\n  name: \"nuke\",\r\n  code: ` \r\n $deleteChannels[$channelID]\r\n $cloneChannel[$channelID]\r\n$onlyPerms[managemessages;Bunu Kullanamazsın]\r\n`,\r\n}; \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "Ztt8L7B7Pg": {
+                "id": "Ztt8L7B7Pg",
+                "isim": "V5 Lock",
+                "bilgi": "Aoijs v5 lock kodudur kanalı kilitler",
+                "kod": "\nmodule.exports = ({\r\nname:\"lock\",\r\n$if:\"v4\",\r\ncode:`\r\n$color[1;RANDOM]\r\n$thumbnail[1;$userAvatar]\r\n$author[1;İşlem Tamamlandı]\r\n$description[1;$getServerVar[tick] <@$authorID> Kanal Kilitlendi\r\nŞu andan itibaren kimse kanala mesaj gönderemez]\r\n$footer[1;$userTag Kullandı]\r\n$addTimestamp[1;$dateStamp]\r\n$modifyChannelPerms[$roleID[@everyone];$channelID;-sendmessage]\r\n$addCmdReactions[<:flora_tick:950474824462004224>]\r\n$deleteIn[15s]\r\n$onlyPerms[admin;$getServerVar[cross] Üzgünüm Yetkin Yok]`}) \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "y6lHmmFZmU": {
+                "id": "y6lHmmFZmU",
+                "isim": "V5 Unlock",
+                "bilgi": "Aoijs v5 kanal kilit açma kodudur",
+                "kod": "\nmodule.exports = ({\r\nname:\"lock\",\r\n$if:\"v4\",\r\ncode:`\r\n$color[1;RANDOM]\r\n$thumbnail[1;$userAvatar]\r\n$author[1;İşlem Tamamlandı]\r\n$description[1;$getServerVar[tick] <@$authorID> Kanal Açıldı\r\nŞu andan itibaren herkes kanala mesaj gönderebilir]\r\n$footer[1;$userTag Kullandı]\r\n$addTimestamp[1;$dateStamp]\r\n$modifyChannelPerms[$roleID[@everyone];$channelID;+sendmessage]\r\n$deleteIn[15s]\r\n$addCmdReactions[<<:flora_tick:950474824462004224>950474824462004224> ]\r\n$onlyPerms[admin;$getServerVar[cross] Üzgünüm Yetkin Yok]`}); \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "zJCBgcaAAf": {
+                "id": "zJCBgcaAAf",
+                "isim": "V5 Bot Açılınca Loga Mesaj Atma",
+                "bilgi": "Aoijs v5 bot Açılınca Loga Mesaj Gönderir Kanal ID Ayarlayın",
+                "kod": "\nbot.readyCommand({\r\n  channel: \"Log Atacağı Kanal ID\",\r\n  code: `\r\n  $log[-------------Bot Açık---------]\r\n  $wait[5s]\r\n$log[Bot \\`$serverCount\\` Sunucu \\`$allMembersCount\\` Kullanıcı \\`$commandsCount\\` Komutla Hizmet Vermye Hazır.]\r\n$color[1;RANDOM]\r\n$author[1;$serverName;$serverIcon]\r\n$description[1;**Bot \\`$serverCount\\` Sunucu \\`$allMembersCount\\` Kullanıcı \\`$commandsCount\\` Komutla İle Tekrar Hizmet Vermeye Hazır.**]\r\n `,\r\n}); \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "w6sFchhqO9": {
+                "id": "w6sFchhqO9",
+                "isim": "V5 Premium Sistemi",
+                "bilgi": "Aoijs v5 premium sistemi premium olmayan kullanıcılar komutu kullanamaz",
+                "kod": "\n\r\nmodule.exports = {\r\nname:\"premium-ver\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**$userTag[$mentioned[1]] Kişisine Başarıyla Premium Verdim**]\r\n$setGlobalUserVar[premium;Var;$mentioned[1]]\r\n$onlyIf[$mentioned[1]!=;**Premium Vereceğim Kişiyi Etiketlemelisin**]\r\n$onlyIf[$getGlobalUserVar[premium;$mentioned[1]]==Bulunmuyor;**Bu Kişide Zaten Premium Var**]\r\n$onlyForIDs[$botOwnerID;**Bu Komutu Kullanmak İçin \\`$userTag[$botOwnerID]\\` Olmalısın**]\r\n`\r\n}  \r\n\r\nmodule.exports = {\r\nname:\"premium-al\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**$userTag[$mentioned[1]] Kişisinden Başarıyla Premiumu Aldım**]\r\n$setGlobalUserVar[premium;Bulunmuyor;$mentioned[1]]\r\n$onlyIf[$mentioned[1]!=;**Premiumunu Alacağım Kişiyi Etiketlemelisin**]\r\n$onlyIf[$getGlobalUserVar[premium;$mentioned[1]]==Var;**Bu Kişide Zaten Premiumu Yok**]\r\n$onlyForIDs[$botOwnerID;**Bu Komutu Kullanmak İçin \\`$userTag[$botOwnerID]\\` Olmalısın**]\r\n`\r\n}   \r\n\r\n\r\n\r\nbot.variables({\r\npremium:\"Bulunmuyor\",\r\n}) \r\nHer Kodun Altına Bunu Ekleyin\r\n$onlyIf[$getGlobalUserVar[premium;$authorID]==Var;**Komutu Kullanmak İçin Premium Üye Olmalısın**]   \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "9jigJSZaNJ": {
+                "id": "9jigJSZaNJ",
+                "isim": "V5 Forceban",
+                "bilgi": "Aoijs v5 Forceban Kodudur ID ile Ban Atılır ",
+                "kod": "\nbot.command({\r\n  name: \"force-ban\",\r\n  code: `\r\n  $ban[$message[1];$guildID;1;$noMentionMessage]\r\n  $author[1;$userTag[$authorID];$userAvatar[$authorID]]\r\n  $thumbnail[1;$userAvatar[$message[1]]]\r\n  $description[1;\r\n  :emoji_70: | \\`$userTag[$message[1]]\\` **İsimli Kullanıcı \\`$noMentionMessage\\` Sebebinden Başarıyla Banlandı ^^**]\r\n  $footer[1;Kullanıcı ID'si : $message[1];$userAvatar[$message[1]]]\r\n  $onlyPerms[ban;{newEmbed:{description::emoji_71: | \\`$userTag[$authorID]\\` Bunu Kullanmak İçin \\`Üyeleri Banla İznin\\` Olmalı}{color:RANDOM}}]\r\n   $suppressErrors[1;{newEmbed:{description::emoji_71: | Bir Kullanıcı ID'si Girmelisin Dostum}{color:RANDOM}}]\r\n   \r\n   `,\r\n}); \r\n\r\nMaine",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "YkVsSdhrrZ": {
+                "id": "YkVsSdhrrZ",
+                "isim": "V5 Bot Engel",
+                "bilgi": "Aoijs v5 Bot Engel Guard Kodudur",
+                "kod": "\nmodule.exports = {\r\nname:\"bot-engel aç\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Başarıyla Bot Engel Açıldı Ve Log Kanalı <#$mentionedChannels[1]> Olarak Ayarlandı.**]\r\n$setServerVar[raidsistem;Açık] $setServerVar[raidlogkanal;$mentionedChannels[1]] \r\n$onlyIf[$mentionedChannels[1]!=;**$userTag Log Kanalı Etiketlemelisin**] \r\n$onlyForIDs[$ownerID;**Bu Komutu Kullanmak İçin \\`$userTag[$ownerID]\\` Olmalısın**]\r\n`\r\n}  \r\n\r\nmodule.exports = {\r\nname:\"bot-engel kapat\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Başarıyla Bot Engel  Kapatıldı**]\r\n$setServerVar[raidsistem;Kapalı] \r\n$resetServerVar[raidlogkanal]\r\n$onlyForIDs[$ownerID;**Bu Komutu Kullanmak İçin \\`$userTag[$ownerID]\\` Olmalısın**]\r\n`\r\n}   \r\n\r\n\r\nMaine;\r\n\r\nbot.joinCommand({\r\nchannel:\"$getServerVar[raidlogkanal]\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Sunucudan Banlanan Bot $userTag[$authorID]**]\r\n$ban[$authorID;$guildID;7;Raid Engel Sisteminden Dolayı Banlandı !]  \r\n$onlyIf[$getServerVar[raidsistem]!=Kapalı;] \r\n$onlyIf[$isBot[$authorID]!=false;]\r\n`\r\n})  \r\n\r\nbot.variables({\r\nraidsistem:\"Kapalı\",\r\nraidlogkanal:\"\",\r\n})  \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "jFxO0GfBX4": {
+                "id": "jFxO0GfBX4",
+                "isim": "V5 Gelişmiş Sa-As ",
+                "bilgi": "Aoijs v5 Gelişmiş Sa-As Kodudur Hepsi Maine Atılacaktır ",
+                "kod": "\nbot.command({\r\nname:\"saas-aç\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**$customEmoji[emoji_70]・Başarıyla Sa As Sistemini Aktif Ettin**]\r\n$setServerVar[saas;açık]\r\n$onlyIf[$getServerVar[saas]!=açık;{newEmbed:{description:**$customEmoji[emoji_71] <@$authorID>,Selam Sistemi Zaten Aktif Kapatmak İçin \\`?saas-kapat\\`**}{color:RANDOM}}]\r\n$onlyPerms[managemessages;{newEmbed:{description:**$customEmoji[emoji_71] Bu Komutu Kullanmak İçin \\`Mesajları Yönet\\` Yetkin Olmalı**}{color:RANDOM}}]\r\n$suppressErrors\r\n`\r\n}) \r\n\r\nbot.command({\r\nname:\"saas-kapat\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**$customEmoji[emoji_70]・Başarıyla Sa As Sistemini Kapadın**]\r\n$setServerVar[saas;kapalı]\r\n$onlyIf[$getServerVar[saas]!=kapalı;{newEmbed:{description:**$customEmoji[emoji_71] <@$authorID>,Selam Sistemi Zaten Kapalı Açmak İçin \\`?saas-aç\\`**}{color:RANDOM}}]\r\n$onlyPerms[managemessages;{newEmbed:{description:**$customEmoji[emoji_71] Bu Komutu Kullanmak İçin \\`Mesajları Yönet\\` Yetkin Olmalı**}{color:RANDOM}}]\r\n$suppressErrors\r\n`\r\n}) \r\n\r\nbot.command({\r\n  name:\"sa\",\r\n  code:`\r\n  $onlyIf[$message!=sa;**$customEmoji[tatlimisir] <@$authorID> Aleyküm Selam Hoşgeldin**]\r\n  $onlyIf[$getServerVar[saas]==açık;]`,\r\n  nonPrefixed: true\r\n})  \r\n\r\nbot.variables({\r\nsaas:\"kapalı\",\r\n}) \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "YbJEvvIo3J": {
+                "id": "YbJEvvIo3J",
+                "isim": "V5 Butonlu Davet",
+                "bilgi": "Aoijs v5 Butonlu Bot Davet Kodudur",
+                "kod": "\nmodule.exports = {\r\nname:\"davet\",\r\ncode:`\r\n$author[1:$userTag Buyur Davet Linkim;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;\r\n**$userTag Beni Davet Etmek İçin Aşağıdaki Butona Tıkla**]\r\n$footer[1;Komut,$userTag Tarafından Kullanıld;$userAvatar[$authorID]]\r\n$addTimestamp[1]\r\n$addButton[1;Davet Et;link;Davet Linki;no;🚀] \r\n`\r\n} \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "QPj0NE8C1s": {
+                "id": "QPj0NE8C1s",
+                "isim": "V5 Spam Engel Sistemi",
+                "bilgi": "Aoijs v5 Spam Engel Sistemidir Sayı Ayarlamalıdır",
+                "kod": "\nmodule.exports = {\r\nname:\"spam-engel aç\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**<@$authorID>,Spam Engel Sistemi Başarıyla Açıldı**]\r\n$setServerVar[spamengel;açık]\r\n$onlyIf[$getServerVar[spamengel]!=açık;{newEmbed:{description:**Spam Engel Zaten Açık Kapatmak İçin \\`?spam-engel kapat\\` Yazmalısın**}{color:RANDOM}}]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n`\r\n}  \r\n\r\nmodule.exports = {\r\nname:\"spam-engel kapat\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**<@$authorID>,Spam Engel Sistemi Başarıyla Kapatıldı**]\r\n$setServerVar[spamengel;kapalı]\r\n$onlyIf[$getServerVar[spamengel]!=kapalı;{newEmbed:{description:**Spam Engel Zaten Kapalı Açmak  İçin \\`?spam-engel aç\\` Yazmalısın**}{color:RANDOM}}]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n`\r\n}   \r\n\r\nmodule.exports = {\r\nname:\"spam-engel sayı\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**<@$authorID>,Spam Sayısı \\`$message[1]\\` Olarak Belirlendi**]\r\n$setServerVar[spamsayı;$message[1]]\r\n$onlyIf[$isNumber[$message[1]]!=false;**Gerçek Rakam Belirtmelisin**] \r\n$onlyIf[$message[2]!=;**Lütfen Sayı Girin**]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n`}  \r\n\r\n\r\nMaine;\r\n\r\nbot.awaitedCommand({ \r\nname:\"spamengel\",\r\n code:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**<@$authorID>,Lütfen Spam Yapma**]\r\n$setServerVar[spamsayı;0;$authorID]\r\n`\r\n}  \r\n\r\nmodule.exports = { \r\nname:\"$alwaysExecute\",\r\n code:`\r\n $setServerVar[spammesaj;$message;$authorID] \r\n$onlyIf[$getServerVar[spamengel]!=kapalı;] \r\n`\r\n }  \r\n\r\nbot.variables({\r\nspamsayı:\"0\",\r\nspamengel:\"kapalı\",\r\nspammesaj:\"\",\r\n})  \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "k141a4nEXO": {
+                "id": "k141a4nEXO",
+                "isim": "V5 Ban Koruma",
+                "bilgi": "Aoijs v5 Ban Koruma Guard Kodudur",
+                "kod": "\nmodule.exports = {\r\nname:\"ban-koruma aç\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Ban Koruma Sistemi Başarıyla Açıldı Ve Log Kanalı İse <$$mentionedChannels[1]> Olarak Ayarlandı.**]\r\n$setServsrVar[bankoruma;$mentionedChannels[1]]\r\n$onlyIf[$mentionedChannels[1]!=;{newEmbed:{description:**Bir Kanal Etiketlemelisin**}{color:RANDOM}}]\r\n$onlyIf[$getServerVar[bankoruma]!=açık;{newEmbed:{description:**<@$authorID>,Ban Koruma Sistemi Zaten Aktif Kapatmak İçin \\`?ban-koruma kapat\\` Yazmalısın}{color:RANDOM}}]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n$suppressErrors\r\n`\r\n}  \r\n\r\nmodule.exports = {\r\nname:\"ban-koruma kapat\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Ban Koruma Sistemi Başarıyla Kapatıldı**]\r\n$resetServerVar[bankoruma]\r\n$onlyIf[$getServerVar[bankoruma]!=kapalı;{newEmbed:{description:**<@$authorID>,Ban Koruma Sistemi Zaten Kapalı Kapatmak İçin \\`?ban-koruma aç\\` Yazmalısın}{color:RANDOM}}]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n$suppressErrors\r\n`\r\n}   \r\n\r\nMaine;\r\n\r\nbot.banAddCommand({\r\nchannel:\"$getServerVar[bankoruma]\",\r\ncode:`\r\n$unban[$authorID]\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**$userTag Kişisi $getBanReason[$authorID] Sebebinden Banlandı Ama Ban Koruma Açık Olduğu İçin Banı Kaldırdım**]\r\n$onlyIf[$getServerVar[bankoruma]!=;]\r\n`\r\n})\r\nbot.onBanAdd()  \r\n\r\nbot.variables({\r\nbankoruma:\"\",\r\n})  \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "FzrvHjJTbR": {
+                "id": "FzrvHjJTbR",
+                "isim": "V5 Kanal Koruma Sistemi ",
+                "bilgi": "Aoijs v5 Kanal Koruma Guard Kodudur",
+                "kod": "\nmodule.exports = {\r\nname:\"kanal-koruma aç\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Kanal Koruma Sistemi Başarıyla Açıldı Ve Log Kanalı İse <$$mentionedChannels[1]> Olarak Ayarlandı.**]\r\n$setServsrVar[kanalkoruma;$mentionedChannels[1]]\r\n$onlyIf[$mentionedChannels[1]!=;{newEmbed:{description:**Bir Kanal Etiketlemelisin**}{color:RANDOM}}]\r\n$onlyIf[$getServerVar[kanalkoruma]!=açık;{newEmbed:{description:**<@$authorID>,Kanal Koruma Sistemi Zaten Aktif Kapatmak İçin \\`?kanal-koruma kapat\\` Yazmalısın}{color:RANDOM}}]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n$suppressErrors\r\n`\r\n}   \r\n\r\nmodule.exports = {\r\nname:\"kanal-koruma kapat\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Kanal Koruma Sistemi Başarıyla Kapatıldı**]\r\n$resetServerVar[kanalkoruma]\r\n$onlyIf[$getServerVar[kanalkoruma]!=kapalı;{newEmbed:{description:**<@$authorID>,Kanal Koruma Sistemi Zaten Kapalı Kapatmak İçin \\`?kanal-koruma aç\\` Yazmalısın}{color:RANDOM}}]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n$suppressErrors\r\n`\r\n}    \r\nMaine;\r\n\r\nbot.channelDeleteCommand({ \r\nchannel:\"$getServerVar[kanalkoruma]\", \r\ncode:`\r\n$author[1;$oldChannel[name] İsimli Kanal Silindi;$serverIcon]\r\n$color[1;RANDOM]\r\n$description[1;**Bir Tane Kanal Silindi Ama Kanal Koruma Aktif Olduğu İçin \\`$oldChannel[name]\\` İsimli Kanal Geri Açıldı**]\r\n$createChannel[$oldChannel[name];$oldChannel[type];yes;$oldChannel[categoryID]]\r\n$onlyIf[$getServerVar[kanalkoruma]!=;]\r\n`\r\n}\r\nbot.onChannelDelete()  \r\n\r\nbot.variables({\r\nkanalkoruma:\"\",\r\n})  \r\n\r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "M6mlZuop8x": {
+                "id": "M6mlZuop8x",
+                "isim": "V5 Rol Koruma Sistemi ",
+                "bilgi": "Aoijs v5 Rol Koruma Guard Kodudur ",
+                "kod": "\nmodule.exports = {\r\nname:\"rol-koruma aç\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Rol Koruma Sistemi Başarıyla Açıldı Ve Log Kanalı İse <$$mentionedChannels[1]> Olarak Ayarlandı.**]\r\n$setServerVar[rolkoruma;$mentionedChannels[1]]\r\n$onlyIf[$mentionedChannels[1]!=;{newEmbed:{description:**Bir Kanal Etiketlemelisin**}{color:RANDOM}}]\r\n$onlyIf[$getServerVar[rolkoruma]!=açık;{newEmbed:{description:**<@$authorID>,Rol Koruma Sistemi Zaten Aktif Kapatmak İçin \\`?rol-koruma kapat\\` Yazmalısın}{color:RANDOM}}]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n$suppressErrors\r\n`\r\n}    \r\n\r\nmodule.exports = {\r\nname:\"rol-koruma kapat\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Rol Koruma Sistemi Başarıyla Kapatıldı**]\r\n$resetServerVar[rolkoruma]\r\n$onlyIf[$getServerVar[rolkoruma]!=kapalı;{newEmbed:{description:**<@$authorID>,Rol Koruma Sistemi Zaten Kapalı Kapatmak İçin \\`?rol-koruma aç\\` Yazmalısın}{color:RANDOM}}]\r\n$onlyPerms[admin;{newEmbed:{description:**Bu Komutu Kullanmak İçin \\`Yönetici İznin\\` Olmalı**}{color:RANDOM}}]\r\n$suppressErrors\r\n`\r\n}     \r\n\r\n\r\nMaine;\r\n\r\nbot.roleDeleteCommand({\r\nchannel:\"$getServerVar[rolkoruma]\",\r\ncode:`\r\n$author[1;Bir Rol Silindi;$serverIcon]\r\n$color[1;RANDOM]\r\n$description[1;**$oldRole[name] İsimli Rol Silindi Ama Rol Koruma Aktif Olduğu İçin Geri Açtım**]\r\n$createRole[$oldRole[name];$oldRole[color];$oldRole[mentionable];$oldRole[hoist];$oldRole[position]] \r\n$onlyIf[$getServerVar[rolkoruma]!=;]\r\n`\r\n})\r\nbot.onRoleDelete()  \r\n\r\n\r\nbot.variables({\r\nrolkoruma:\"\",\r\n})  \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "R7fg3C0ca7": {
+                "id": "R7fg3C0ca7",
+                "isim": "V5 Ayarlamalı Prefix ",
+                "bilgi": "Aoijs v5 Ayarlamalı Prefix Kodudur",
+                "kod": "\nmodule.exports = {\r\nname:\"prefix-değiştir\",\r\ncode:`\r\n$author[1;$userTag;$userAvatar[$authorID]]\r\n$color[1;RANDOM]\r\n$description[1;**Başarıyla Prefix \\`$message[1]\\` Olarak Ayarlandı.**]\r\n$addTimestamp[1]\r\n$setServerVar[prefix$message[1]]\r\n$onlyPerms[admin;{newEmbed:{description:**<@$authorID> Bunu Kullanmak İçin \\`Yönetici\\` İznin Olmalı**}{color:RANDOM}}]\r\n$argsCheck[1;{newEmbed:{description:**<@$authorID> Bir Prefix Belirtmelisin}{color:RANDOM}}]\r\n`\r\n}  \r\n\r\n\r\nMaine;\r\n\r\nbot.variables({\r\nprefix:\"botunuzun prefixi\",\r\n}) \r\n\r\n\r\nNOT;\r\n\r\n\r\nPrefix yerini \r\nprefix:\"$getServerVar[prefix]\",\r\n yapın\r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "m8ZabECrZl": {
+                "id": "m8ZabECrZl",
+                "isim": "V5 Belirli Kanaldaki Her Mesaja Tepki Ekleme",
+                "bilgi": "Aoijs v5 Belirli Kanaldaki Her Mesaja Tepki Ekleme Kodudur Maine Atılacaktır ",
+                "kod": "\nmodule.exports = {\r\n  name:\"$alwaysExecute\",\r\n  code:`\r\n  $addCmdReactions[✔️]\r\n  $onlyIf[$channelID==Buraya kanal ıd yaz koç;]\r\n  `\r\n} \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "abd3GKLKuf": {
+                "id": "abd3GKLKuf",
+                "isim": "V5 Gelişmiş Afk Sistemi",
+                "bilgi": "Aoijs de Gelişmiş Afk Sistemi ( Variable'ların Karşısı Boş İse Değer Yoktur ) Candy Code - Angel Code Ortak Kodudur .gg/9P9fM3WVTk",
+                "kod": "\nGereken Variableler; (Karşısı Boş İse Değer Yoktur)\r\nafkdurum = false\r\nafksure =\r\nafksebep = belirtilmedi\r\n\r\n----------------------------------------------------------------------\r\n\r\nmodule.exports = [{\r\nname:\"afk\",\r\ncode:`\r\n$color[1;#2f3136]\r\n$title[1;Afk Panel]\r\n$description[1;Başarılı bir şekilde $replaceText[\\`$noMentionMessage\\`;\\`\\`;\\`Sebep belirtilmedi\\`] sebebi ile afk moduna giriş yaptınız]\r\n$setUserVar[afkdurum;true]\r\n$setUserVar[afksure;$hour:$minute]\r\n$setUserVar[afksebep;$noMentionMessage]\r\n$timezone[Turkey]\r\n\r\n\r\n`},{\r\nname:\"$alwaysExecute\",\r\n$if:\"v4\",\r\ncode:`\r\n$if[$getUserVar[afkdurum]==true]\r\n$color[1;#2f3136]\r\n$title[1;Afk Panel]\r\n$description[1;<@$authorID> afk modundan çıkış yaptınız\r\n\r\nAfk Olduğunuz Saat: \\`$getUserVar[afksure]\\`\r\nAfk Olma Sebep: $replaceText[\\`$getUserVar[afksebep]\\`;\\`belirtilmedi\\`;\\`Sebep belirtilmedi\\`]]\r\n$thumbnail[1;$authorAvatar]\r\n$setUserVar[afkdurum;false]\r\n$endif\r\n\r\n$if[$getUserVar[afkdurum;$mentioned[1;no]]==true]\r\n$color[1;#2f3136]\r\n$title[1;Afk Panel]\r\n$description[1;<@$mentioned[1]> \\`$getUserVar[afksure]\\` saatinde \\`$getUserVar[afksebep]\\` sebebiyle klavyeden uzakta]\r\n$endif\r\n\r\n\r\n$onlyIf[$message[1]!=afk;]\r\n\r\n\r\n`\r\n  \r\n}] \r\n",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/14/2022"
+            },
+            "u7dSCq26kG": {
+                "id": "u7dSCq26kG",
+                "isim": "V5 Süreli Mute",
+                "bilgi": "Kod v5 tir direkt timeouttur onlyIf leri fln Angel Bot'dan hazır aldım ",
+                "kod": "\nmodule.exports = {\r\nname:\"mute\",\r\ncode:`\r\n$sendDM[**Angel Code Share Sunucusunda** __$messageSlice[2]__ **Sebebinden Mute Yediniz;$mentioned[1];no]\r\n$author[1;Kullanıcı Mutelendi]\r\n$description[1;\r\n**Yetkili**\r\n<@$authorID> - \\`$authorID\\`\r\n\r\n**Kullanıcı**\r\n<@$mentioned[1]> - \\`$mentioned[1]\\`\r\n\r\n**Sebep**\r\n\\`$messageSlice[2]\\`\r\n\r\n**Süre**\r\n\\`$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage[1];s; Saniye];m; Dakika];h; Saat];d; Gün]\\`]]\r\n$thumbnail[1;$userAvatar]\r\n  $color[1;RANDOM]\r\n    $timeoutMember[$guildID;$mentioned[1];$noMentionMessage[1];no;$replaceText[$noMentionMessage;$noMentionMessage[1];]]\r\n    $onlyIf[$isNumber[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage[1];s;];m;];h;];d;]]==true;<@$authorID>, Süre belirt.]\r\n    $onlyIf[$checkContains[$noMentionMessage[1];s;m;h;d]==true;<@$authorID>, Süre belirt.]\r\n    $onlyIf[$rolePosition[$highestRole[$clientID]]<=$rolePosition[$highestRole[$mentioned[1]]];<@$authorID>, Rolümden üstte/eşit birini muteleyemem.]\r\n    $onlyIf[$rolePosition[$highestRole[$authorID]]<=$rolePosition[$highestRole[$mentioned[1]]];<@$authorID>, Rolünden üstte/eşit birini muteleyemem.]\r\n    $onlyIf[$djsEval[client.guilds.cache.get('$guildID').members.cache.get('$mentioned[1]').isCommunicationDisabled()  ;yes]==false;<@$authorID>, Kullanıcı zaten mutelenmiş.]\r\n$argsCheck[>0;<@$authorID> Kullanıcı Belirt]\r\n$onlyPerms[managemembers;<@$authorID> Üzgünüm Yetkin Yok]\r\n`} ",
+                "rank": "aoijs",
+                "dcisim": "Styles",
+                "date": "5/16/2022"
+            },
+            "n7aMMn6y4c": {
+                "id": "n7aMMn6y4c",
+                "isim": "Bot bilgi",
+                "bilgi": "Aoi js botun bilgilerini gösterir ",
+                "kod": "\nmodule.exports = {\r\nname:\"bot-bilgisi\",\r\ncode:`\r\n$author[1;Bot İstatistikleri;$userAvatar[$clientID]\r\n$description[1;\r\n**Botun Sahibi**: <@$botOwnerID>\r\n\r\n**Botun Pingi**: \\`$ping ms\\`\r\n\r\n**Kütüphane Sürümü**: \\`$nodeVersion\\`\r\n\r\n**Aoijs Sürümü**: \\`$packageVersion\\`\r\n\r\n**Komut Sayısı**: \\`$commandsCount\\`\r\n\r\n**Kanal Sayısı**: \\`$allChannelsCount\\`\r\n\r\n**Kullanıcı Sayısı**:  \\`$allMembersCount\\`\r\n\r\n**Sunucu Sayısı**: \\`$serverCount\\`]\r\n$color[1;RANDOM]\r\n$footer[1;$userName Kullandı;$userAvatar[$authorID]]\r\n$addTimestamp[1;$dateStamp] \r\n\r\n`} \r\n",
+                "rank": "aoijs",
+                "dcisim": "ஐ Şehim",
+                "date": "5/21/2022"
+            },
+            "6ckzmxYmnG": {
+                "id": "6ckzmxYmnG",
+                "isim": "Kullanıcı Bilgi ",
+                "bilgi": "Aoi js kullanıcı bilgilerini gösterir ",
+                "kod": "\nmodule.exports = ({\r\nname: \"profil\",\r\naliases:\"kullanıcı-bilgi\",\r\ncode:\r\n`\r\n$color[1;RANDOM]\r\n$thumbnail[1;$userAvatar[$mentioned[1;yes]]]\r\n$author[1;Bilgileriniz;$userAvatar[$mentioned[1;yes]]]\r\n$description[1;\r\n**Kullanıcı İsmi**\r\n\\`$username[$mentioned[1;yes]]\\`\r\n\r\n**Kullanıcı Etiketi**\r\n\\`#$discriminator[$mentioned[1;yes]]\\`\r\n\r\n**Hesap Tarihi**\r\n\\`$creationDate[$mentioned[1;yes];date]\\`\r\n\r\n**Sunucudaki Rolleri**\r\n$userRoles[$mentioned[1;yes];$guildID;mention;,]]\r\n` \r\n} \r\n",
+                "rank": "aoijs",
+                "dcisim": "ஐ Şehim",
+                "date": "5/21/2022"
+            },
+            "NzLAQ4Tzsr": {
+                "id": "NzLAQ4Tzsr",
+                "isim": "Sunucu bilgi ",
+                "bilgi": "Sunucu kuruluş tarihini de içeren sunucu bilgi aoi js ",
+                "kod": "\nmodule.exports = {\r\nname:\"sunucu-bilgi\",\r\ncode:`\r\n$thumbnail[1;$serverIcon]\r\n$color[1;RANDOM]\r\n$author[1;$servername Bilgileri;$serverIcon]\r\n$description[1;\r\n**Kuruluş Tarihi**\r\n\\`$creationDate[$guildID;date]\\`\r\n\r\n**Üye Sayısı**\r\n\\`$membersCount\\`\r\n\r\n**Kanal Sayısı**\r\n\\`$channelCount\\`\r\n\r\n**Sunucu ID** \r\n\\`$guildID\\`\r\n\r\n**Sunucu Sahibi**\r\n<@$ownerID>\r\n\r\n**Rol Sayısı**\r\n\\`$roleCount\\`\r\n\r\n**Roller**\r\n$guildRoles\r\n`} \r\n",
+                "rank": "aoijs",
+                "dcisim": "ஐ Şehim",
+                "date": "5/21/2022"
+            },
+            "qaJi9KadcQ": {
+                "id": "qaJi9KadcQ",
+                "isim": "Aoi js Say",
+                "bilgi": "Sunucudaki üye sayılarını yazar",
+                "kod": "\nmodule.exports = {\r\nname:\"say\",\r\ncode:`\r\n$author[1;İSTATİSTİKLERİMİZ;$serverIcon]\r\n$description[1;\r\n\r\n\\`•\\` **Sunucumuzda Toplam** \\`$membersCount\\` **Kişi Bulunmakta**\r\n\r\n\\`•\\` **Sunucumuzda Toplam** \\`$math[$membersCount-$membersCount[$guildID;offline]]\\` **Aktif Üye Bulunmakta**\r\n\r\n\\`•\\` **Sunucumuza Toplam** \\`$serverBoostCount\\` **Takviye Yapılmış**]\r\n`} \r\n",
+                "rank": "aoijs",
+                "dcisim": "ஐ Şehim",
+                "date": "5/21/2022"
+            },
+            "BClj6vLjqP": {
+                "id": "BClj6vLjqP",
+                "isim": "Aoi js sil ",
+                "bilgi": "Mesaj silme komutudur",
+                "kod": "\nmodule.exports = {\r\n   name: \"sil\",\r\n   code: `\r\n \r\n    $clear[$message[1]]\r\n    $onlyPerms[managemessages;Bu komutu kullanmak için ”Mesajları Yönet“ yetkisine sahip olman gerek.]\r\n    **$message** adet mesaj başarıyla havaya uçuruldu! ☑️\r\n     $onlyIf[$isNumber[$message[1]]!=false;Lütfen sileceğin mesaj miktarını gir. 🔴]\r\n$deleteIn[3s]\r\n`}  \r\n\r\nkomutlar/sil.js",
+                "rank": "aoijs",
+                "dcisim": "ஐ Şehim",
+                "date": "5/21/2022"
+            }
+        }
+    }
+]

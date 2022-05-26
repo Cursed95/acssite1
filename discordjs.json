@@ -1,0 +1,132 @@
+[
+    {
+        "kodlar": {
+            "dVZDNruRg9": {
+                "id": "dVZDNruRg9",
+                "isim": "Djs Eklendim Atıldım",
+                "bilgi": "Bot Eklenip Atıldığı Sunucuları Kayıt Eder Maine Atılacaktır",
+                "kod": "\nclient.on('guildDelete', guild => {\r\n\r\nlet kick = new Discord.MessageEmbed()\r\n\r\n.setColor(\"RANDOM\")\r\n.setTitle(\" Bot Kicklendi \")\r\n.addField(\"Sunucu Adı:\", guild.name)\r\n.addField(\"Sunucu sahibi\",`<@${guild.ownerID}>`)\r\n.addField(\"Sunucu Sahibi'nin ID'si\", guild.ownerID)\r\n.addField(\"Sunucunun Kurulu Olduğu Bölge:\", guild.region)\r\n.addField(\"Sunucudaki Kişi Sayısı:\", guild.memberCount)\r\n\r\n  client.channels.cache.get('atılmalogkanalID').send(kick);\r\n\r\n});\r\n\r\n//--------------------------------------------------------//\r\n\r\nclient.on('guildCreate', guild => {\r\n\r\nlet ekleme = new Discord.MessageEmbed()\r\n\r\n.setColor(\"RANDOM\")\r\n.setTitle(\" Bot Eklendi \")\r\n.addField(\"Sunucu Adı:\", guild.name)\r\n.addField(\"Sunucu sahibi\",`<@${guild.ownerID}>`)\r\n.addField(\"Sunucu Sahibi'nin ID'si\", guild.ownerID)\r\n.addField(\"Sunucunun Kurulu Olduğu Bölge:\", guild.region)\r\n.addField(\"Sunucudaki Kişi Sayısı:\", guild.memberCount)\r\n\r\n  client.channels.cache.get('eklenmelogkanalID').send(ekleme);\r\n\r\n});  \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/6/2022"
+            },
+            "2117fLXxc8": {
+                "id": "2117fLXxc8",
+                "isim": "Djs Mesaj Sil Kodu",
+                "bilgi": "Mesaj Silme Kodudur Maximum 100 Mesaj Siler",
+                "kod": "\nconst Discord = require('discord.js')\r\nconst ayarlar = require(\"../ayarlar.json\")\r\nconst db = require('quick.db')\r\n\r\nexports.run = async(client, message, args) => {\r\n\r\nlet prefix = \"!\"\r\n\r\nif(!message.member.permissions.has(\"MANAGE_MESSAGES\")) return message.channel.send(new Discord.MessageEmbed().setDescription(\"Bu Komutu Kullanabilmek İçin \\`Mesajları Yönet\\` Yetkisine Sahip Olmalısın !\").setColor(\"#a1e3e6\"))\r\n\r\n    let sil = args[0]\r\n    if(!sil) {\r\nconst embed = new Discord.MessageEmbed()\r\n  .setDescription(`Bir sayı belirtmelisin ! Örnek; ${prefix}sil 10`)\r\n  .setColor(\"#a1e3e6\")\r\n        message.channel.send(embed)\r\n    }\r\n\r\n    message.channel.bulkDelete(sil).then(() => {\r\nconst channel = new Discord.MessageEmbed()\r\n    .setDescription(`Başarıyla ${sil} Mesaj ${message.author} Tarafından Sildirildi!`)\r\n    .setColor(\"#a1e3e6\")\r\n        message.channel.send(channel).then(m => m.delete({ timeout: 4000 }));\r\n    })\r\n}\r\nexports.conf = {\r\n    enabled: true,\r\n    guildOnly: false,\r\n    aliases: ['temizle'],\r\n    permlvl: 0\r\n}\r\n\r\nexports.help = {\r\n    name: \"sil\"\r\n} \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/6/2022"
+            },
+            "EtEpviBj9v": {
+                "id": "EtEpviBj9v",
+                "isim": "Djs Bot Otorol",
+                "bilgi": "Djs de Ayarlamasız Bot Otorol Kodudur Maine Atılacaktır",
+                "kod": "\nclient.on('guildMemberAdd', member => {\r\n  if (member.user.bot) member.roles.add(\"ROL İD\")\r\n}) ",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/6/2022"
+            },
+            "I8jolUolr7": {
+                "id": "I8jolUolr7",
+                "isim": "Djs Slowmode",
+                "bilgi": "Djs de Slowmode Kodudur Kanalın Yavaş Modunu Ayarlar",
+                "kod": "\nconst Discord = require(\"discord.js\");\r\nconst db = require('quick.db');\r\nconst ayarlar = require('../ayarlar.json')\r\nlet prefix = ayarlar.prefix\r\n\r\nexports.run = async (client, message, args) => {\r\n  \r\n  if (!message.member.hasPermission(\"MANAGE_CHANNELS\")) {\r\n    \r\n  const yavasmod = new Discord.MessageEmbed()\r\n  \r\n  .setDescription(`Bu Komutu Kullanmak İçin **Yönetici** Yetkisine Sahip Olmalısın!`)\r\n  .setColor(\"RED\")\r\n  .setFooter(client.user.username, client.user.avatarURL);\r\n\r\n  message.channel.send(yavasmod);\r\n    \r\n  return;\r\n  }\r\n  \r\n  if (message.channel.type !== \"text\") return;\r\n  \r\n  const limit = args[0] ? args[0] : 0;\r\n  if (!limit) {\r\n    \r\n  var yavasmod = new Discord.MessageEmbed()\r\n  \r\n  .setDescription(`Lütfen Talimatları Uygulayın. Örnek Kullanım : **${prefix}yavaş-mod 5**`)\r\n  .setColor(\"RED\")\r\n  .setFooter(client.user.username, client.user.avatarURL);\r\n    \r\n  message.channel.send({ yavasmod });\r\n    \r\n  return\r\n  }\r\n\r\n  let number = [\r\n    \r\n  \"0\",\r\n  \"1\",\r\n  \"2\",\r\n  \"3\",\r\n  \"4\",\r\n  \"5\",\r\n  \"6\",\r\n  \"7\",\r\n  \"8\",\r\n  \"9\",\r\n  \"10\",\r\n  \"11\",\r\n  \"12\",\r\n  \"13\",\r\n  \"14\",\r\n  \"15\",\r\n  \"16\",\r\n  \"17\",\r\n  \"18\",\r\n  \"19\",\r\n  \"20\"\r\n    \r\n  ];\r\n\r\n  if (!number.some(word => message.content.includes(word))) {\r\n  {\r\n    \r\n  const yavasmod = new Discord.MessageEmbed()\r\n  \r\n  .setDescription(`Süre Limiti Sadece **Sayı** Olabilir`)\r\n  .setColor(\"RED\")\r\n  .setFooter(client.user.username, client.user.avatarURL);\r\n\r\n  message.channel.send(yavasmod);\r\n    \r\n  return;\r\n  }\r\n  }\r\n\r\n  if (limit > 20) {\r\n    \r\n  return message.channel.send(\r\n    \r\n  new Discord.MessageEmbed()\r\n    \r\n  .setDescription(\"Süre Limiti Maksimum **20** Saniye Olabilir.\")\r\n  .setColor(\"RED\")\r\n    \r\n  );\r\n  }\r\n  \r\n  message.channel.send(\r\n    \r\n  new Discord.MessageEmbed()\r\n    \r\n  .setDescription(`Yazma Süre Limiti **${limit}** Saniye Olarak Ayarlanmıştır.`)\r\n  .setFooter(client.user.username, client.user.avatarURL)\r\n  .setColor(\"GREEN\")\r\n    \r\n  );\r\n  \r\n  var request = require(\"request\");\r\n  request({\r\n    \r\n  url: `https://discordapp.com/api/v7/channels/${message.channel.id}`,\r\n    \r\n  method: \"PATCH\",\r\n    \r\n  json: {\r\n    \r\n  rate_limit_per_user: limit\r\n    \r\n  },\r\n    \r\n  headers: {\r\n    \r\n  Authorization: `Bot ${client.token}`\r\n    \r\n  }\r\n    \r\n  });\r\n  \r\n  };\r\n\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: true,\r\n  aliases: [\"yavaşmod\",\"slowmode\",\"slow-mode\"],\r\n  permLevel: 2\r\n};\r\n\r\nexports.help = {\r\n  name: \"yavaş-mod\",\r\n  description: \"\",\r\n  usage: \"yavaş-mod\"\r\n}; \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/6/2022"
+            },
+            "IcV7E29NX2": {
+                "id": "IcV7E29NX2",
+                "isim": "Djs Yazıyor",
+                "bilgi": "Djs Belirlenen Kanala Bot Yazıyor Olarak Gözükür Maine Atılacaktır ",
+                "kod": "\nclient.on('ready', ()=>{\r\nclient.channels.cache.get('Kanal ID').startTyping()\r\n}) \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/7/2022"
+            },
+            "cI3dxni4m2": {
+                "id": "cI3dxni4m2",
+                "isim": "Djs Ban Say",
+                "bilgi": "Djs de Ban Say Kodudur Banlı Kullanıcı Sayısını Gösterir ",
+                "kod": "\nconst Discord = require(\"discord.js\");\r\nconst client = new Discord.Client();\r\n\r\nexports.run = (client, message, args) => {\r\n  var banlikullanici = message.guild.fetchBans().then(bans => {\r\n  message.channel.send(`Bu sunucuda **${bans.size}** banlı üye bulunmaktadir.`)\r\n  })\r\n };\r\n\r\n  exports.conf = {\r\n  enabled: true,\r\n  guildOnly: true,\r\n  aliases: [],\r\n  permLevel: 1\r\n};\r\nexports.help = {\r\n  name: \"bansay\",\r\n}; \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "wHNeO20NY4": {
+                "id": "wHNeO20NY4",
+                "isim": "Djs Sunucu Pp",
+                "bilgi": "Djs de Sunucu pp Kodudur Sunucu İconunu Gösterir",
+                "kod": "\nconst Discord = require('discord.js');\r\nconst ayarlar = require('../ayarlar.json');\r\n \r\nexports.run = (client, message, params) => {\r\n  \r\n  const embed = new Discord.MessageEmbed()\r\n  .setColor(\"RANDOM\")\r\n  .setTitle(`${message.guild.name} Adlı Sunucunun Resmi`)\r\n  .setImage(message.guild.iconURL({dynamic: true}))\r\n  message.channel.send(embed)\r\n}\r\n\r\nexports.conf = {\r\n  enabled: true, \r\n  guildOnly: false, \r\n    aliases: [\"sunucuresmi\"],\r\n}\r\n\r\n\r\nexports.help = {\r\n  name: 'sunucuresmi',\r\n  description: 'Sunucuresmi.',\r\n  usage: 'sunucuresmi',\r\n}; \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "nJGUufWuAK": {
+                "id": "nJGUufWuAK",
+                "isim": "Djs Gelişmiş Ban",
+                "bilgi": "Djs de Gelişmiş Ban Kodudur",
+                "kod": "\nconst discord = require(\"discord.js\");\r\nexports.run = (client, message, args) => {\r\n\r\n\r\n\r\n    \r\n  var guild = message.guild;\r\n  var banlayan = message.author.tag;\r\n  let banxx = message.guild.fetchBans();\r\n   var kisi = message.mentions.members.first() || client.users.resolve(args[0]) || client.users.cache.find(u => u.username === args[0]) || client.users.cache.get(args[0]); \r\n     var sebeb = args.slice(1).join(\" \");\r\n    \r\n    \r\n     if (!message.member.hasPermission(\"BAN_MEMBERS\")) {\r\n        const yetkinyok = new discord.MessageEmbed()\r\n          .setDescription(\"**❌ Herhangi Bir Kişi Banlamak İçin `Üyeleri Engelle` İznine Sahip Olmalısın!**\")\r\n          .setColor(\"RED\")\r\n          return message.channel.send(yetkinyok)\r\n     }\r\n\r\n\r\n       \r\n      if(!kisi) {\r\n    const embedbruh = new discord.MessageEmbed()\r\n    .setDescription(\"**❌ Belirttiğiniz Kişi Sunucuda Yok Veya Banlamak İçin Herhangi Bir Kişi Belirtmedin!**\")\r\n    .setColor(\"RED\")\r\n    return message.channel.send(embedbruh)\r\n            \r\n  }\r\n      \r\n    if(!message.author.id !== message.guild.ownerID) {  \r\n  if(message.member.roles.highest.comparePositionTo(message.mentions.members.first().roles.highest) <= 1) {\r\n    const rolsira = new discord.MessageEmbed()\r\n    .setDescription(\"**❌ Bu Kişi Rol Sıralamasında Senden Yüksekte Veya Eşit Bu Sebeple Onu Banlayamazsın!**\")\r\n    .setColor(\"RED\")\r\n    return message.channel.send(rolsira) \r\n     }\r\n    }\r\n\r\n\r\n     if(kisi.id == message.guild.ownerID) {\r\n        const arkadaşownermış = new discord.MessageEmbed()\r\n   .setDescription(\"**❌ Bu Kişi Sunucu Sahibi Onu Banlayamazsın!**\")\r\n   .setColor(\"RED\")\r\n   return message.channel.send(arkadaşownermış) \r\n      }\r\n                    \r\n          if (!message.guild.me.permissions.has(\"BAN_MEMBERS\")) {\r\n       const yetkimyok = new discord.MessageEmbed()\r\n       .setDescription(\"**❌ Herhangi Bir Kişi Banlamak İçin `Üyeleri Engelle` İznine Sahip Olmalıyım!**\")\r\n       .setColor(\"RED\")\r\n       return message.channel.send(yetkimyok)\r\n     }\r\n          \r\n      \r\n          if(!kisi.bannable) {\r\n      const notbannable = new discord.MessageEmbed()\r\n .setDescription(\"**❌ Bu Kişiyi Banlayamam!**\")\r\n .setColor(\"RED\")\r\n return message.channel.send(notbannable)\r\n    }\r\n\r\n          \r\n          \r\n         var now = new Date()\r\n var sebepp = null\r\n \r\n if(!sebeb) {\r\n   sebepp = \"Sebep Belirtilmemiş.\"\r\n }    \r\n if(sebeb) {\r\n   sebepp = sebeb\r\n }   \r\n         try {\r\n           const sucembeddm = new discord.MessageEmbed()\r\n           .setDescription(`${kisi} **${guild}** Adlı Sunucudan Banlandın.` + \"\\r\\n\" + `**Sebep: ${sebepp}**`)\r\n           .setColor(\"RED\")\r\n          kisi.send(sucembeddm)\r\n           const sucembed = new discord.MessageEmbed()\r\n           .setDescription(`✅ ${kisi} **Adlı Kullanıcı ${sebepp} Sebebi İle Banlandı.**`)\r\n           .setColor(\"GREEN\")\r\n          message.channel.send(sucembed)\r\n          return guild.members.ban(kisi, { reason: sebepp });\r\n        } catch (error) {\r\n          message.reply(\"**Bir Hata İle Karşılaşıldı Birkaç Dakika İçinde Tekrar Deneyin Eğer Bu Sorununuza Çözüm Olmadıysa Bir Geliştirici Veya Yetkiliye Bildirin!**\")\r\n          console.log(error)\r\n        }  \r\n          \r\n          \r\n          \r\n\r\n\r\n\r\n\r\n}\r\n  \r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: true,\r\n  aliases: [\"ban\"],\r\n  permLevel: 0\r\n};\r\nexports.help = {\r\n  name: \"ban\",\r\n  description: \"Belirttiğiniz Kişiyi Sunucudan Banlar\",\r\n  usage: \"ban <Etiket> <Sebep Varsa Sebep>\"\r\n}; \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "LEDezTu3CM": {
+                "id": "LEDezTu3CM",
+                "isim": "Djs Ayarlamasız Sa-As",
+                "bilgi": "Djs de Ayarlamasız Sa-As Kodudur Maine Atılacaktır ",
+                "kod": "\nclient.on(\"message\", async msg => {\r\n  if (msg.content.toLowerCase() === 'sa') {\r\n    msg.reply('**Aleykum Selam  Hoşgeldin**');\r\n  }\r\n}); \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "Zakn1m227z": {
+                "id": "Zakn1m227z",
+                "isim": "Djs xox",
+                "bilgi": "Djs de xox kodudur",
+                "kod": "\nconst TicTacToe = require('discord-tictactoe');\r\nconst Discord = require('discord.js');\r\nconst client = new Discord.Client();\r\nconst game = new TicTacToe({ language: 'tr' })\r\n \r\nexports.run = async (client ,message, args) =>{\r\n  game.handleMessage(message);\r\n};\r\n\r\nexports.conf = {\r\n    enabled: true,\r\n    guildOnly: false,\r\n    aliases: ['xox'],\r\n    permLevel: 0\r\n}\r\n\r\nexports.help = {\r\n    name: 'tictactoe',\r\n    description: 'XOX oyunu.',\r\n    usage: 'xox'\r\n} \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "ieOZhgVdM1": {
+                "id": "ieOZhgVdM1",
+                "isim": "Djs Butonlu Yardım ",
+                "bilgi": "Djs de Butonlu Yardım Kodudur",
+                "kod": "\n\r\nconst disbut = require('discord-buttons')\r\ndisbut(client);\r\n\r\nclient.on('message', async (message) => {\r\n    if (message.content.startsWith('!buton')) {\r\n        let button = new disbut.MessageButton()\r\n        .setStyle('red')\r\n        .setLabel('Hayır')\r\n        .setID('click_to_function') \r\n\r\n        let button2 = new disbut.MessageButton()\r\n        .setStyle('green')\r\n        .setLabel('Evet') \r\n        .setID('click_to_function2') \r\n\r\n        let button3 = new disbut.MessageButton()\r\n        .setStyle('red')\r\n        .setLabel('selam')\r\n        .setID('click_to_function3') \r\n\r\n        let button4 = new disbut.MessageButton()\r\n        .setStyle('red')\r\n        .setLabel('naber')\r\n        .setID('click_to_function4') \r\n\r\n        \r\n\r\n        message.channel.send('Covid-19'botunu kullanıyorsun değil mi', {\r\n            buttons:[\r\n                button,button2,button3,button4\r\n            ]\r\n        });\r\n    };\r\n});\r\n\r\nclient.on('clickButton', async (button) => {\r\n  if (button.id === 'click_to_function') {\r\n    button.channel.send(`${button.clicker.user.tag} Yardım 1; ne\r\n  }\r\n  if (button.id === 'click_to_function2') {\r\n    button.channel.send(`${button.clicker.user.tag} Yardım 2; ne\r\n  }\r\n  if (button.id === 'click_to_function3') {\r\n    button.channel.send(`${button.clicker.user.tag}  Yardım 3; ne\r\n  }\r\n    if (button.id === 'click_to_function4') {\r\n    button.channel.send(`${button.clicker.user.tag} Yardım 4`);\r\n  }\r\n});\r\n```\r\nconst disbut = require('discord-buttons')\r\ndisbut(client);\r\n\r\nclient.on('message', async (message) => {\r\n    if (message.content.startsWith('!buton')) {\r\n        let button = new disbut.MessageButton()\r\n        .setStyle('red')\r\n        .setLabel('Hayır')\r\n        .setID('click_to_function') \r\n\r\n        let button2 = new disbut.MessageButton()\r\n        .setStyle('green')\r\n        .setLabel('Evet') \r\n        .setID('click_to_function2') \r\n\r\n        let button3 = new disbut.MessageButton()\r\n        .setStyle('red')\r\n        .setLabel('selam')\r\n        .setID('click_to_function3') \r\n\r\n        let button4 = new disbut.MessageButton()\r\n        .setStyle('red')\r\n        .setLabel('naber')\r\n        .setID('click_to_function4') \r\n\r\n        \r\n\r\n        message.channel.send('Covid-19'botunu kullanıyorsun değil mi', {\r\n            buttons:[\r\n                button,button2,button3,button4\r\n            ]\r\n        });\r\n    };\r\n});\r\n\r\nclient.on('clickButton', async (button) => {\r\n  if (button.id === 'click_to_function') {\r\n    button.channel.send(`${button.clicker.user.tag} Yardım 1; ne\r\n  }\r\n  if (button.id === 'click_to_function2') {\r\n    button.channel.send(`${button.clicker.user.tag} Yardım 2; ne\r\n  }\r\n  if (button.id === 'click_to_function3') {\r\n    button.channel.send(`${button.clicker.user.tag}  Yardım 3; ne\r\n  }\r\n    if (button.id === 'click_to_function4') {\r\n    button.channel.send(`${button.clicker.user.tag} Yardım 4`);\r\n  }\r\n\r\n`",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "VqpmJpEjTy": {
+                "id": "VqpmJpEjTy",
+                "isim": "Djs Ping",
+                "bilgi": "Djs de Ping Kodudur Botun Pingini Gösterir ",
+                "kod": "\nconst Discord = require(\"discord.js\");\r\n\r\nexports.run = async (client, message) => {\r\n  let embed = new Discord.MessageEmbed()\r\n    .setColor(\"RANDOM\")\r\n\r\n    .addField(\r\n      \"**__Gecikme Sürem__**\",\r\n      `**${client.ws.ping}** ms Olarak Hesaplandı.`,\r\n      true\r\n    );\r\n\r\n  message.channel.send(embed);\r\n};\r\n\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: true,\r\n  aliases: [\"p\", \"ms\"],\r\n  permLevel: 0\r\n};\r\n\r\nexports.help = {\r\n  name: \"ping\",\r\n  description: \"Botun pingini gösterir\",\r\n  usage: \"ping\"\r\n}; \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "QS7tRGEgi6": {
+                "id": "QS7tRGEgi6",
+                "isim": "Djs Kanal Sil",
+                "bilgi": "Djs de Kanal Silme Kodudur",
+                "kod": "\nconst Discord = require(\"discord.js\")\r\nexports.run = async(client, message, args) => {\r\nconst kanal = message.mentions.channels.first() \r\nif(!kanal) return message.channel.send(\"Lutfen Bir Kanal Etiketleyin!\") \r\nconst sil = message.guild.channels.map(a => a.id === kanal.id)\r\nsil.delete().then(x => {\r\nmessage.reply(\"${kanal} Isminde Olan Tum Kanallar silindi. \") \r\n}) \r\n}\r\nexports.conf = {\r\nenabled: true, \r\nguildOnly: true \r\n}\r\nexports.help = {\r\nname:\"kanalları-sil\" \r\n}  \r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "rr4McLTPLH": {
+                "id": "rr4McLTPLH",
+                "isim": "Djs Random Pp",
+                "bilgi": "Djs de Random Pp Kodudur",
+                "kod": "\nconst YusufBot = require('discord.js');\r\nexports.run = (client, message) => {\r\n  const YusufEmbed = new YusufBot.MessageEmbed()\r\n  .setColor(\"BLUE\")\r\n  .setTimestamp()\r\n  .setImage(client.users.cache.random().displayAvatarURL({ display: true, dynamic: true }))\r\n‌  message.channel.send(YusufEmbed)\r\n}\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: false,\r\n  aliases: [\"random-pp\"],\r\n  kategori: \"Bot\",\r\n  permLevel: 0\r\n};\r\n\r\nexports.help = {\r\n  name: 'randompp',\r\n  description: 'Bot ile ilgili bilgi verir.',\r\n  usage: 'bilgi'\r\n};\r\n",
+                "rank": "discordjs",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            }
+        }
+    }
+]

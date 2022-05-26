@@ -1,0 +1,609 @@
+[
+    {
+        "kodlar": {
+            "TbAmwbVX0u": {
+                "id": "TbAmwbVX0u",
+                "isim": "Bdfd Bot Bilgi",
+                "bilgi": "Kullanıldığında botun bilgilerini gösterir",
+                "kod": "\n$nomention \r\n$title[Bot İsmi | İstatistik]\r\n $description[\r\n| __Bot Bilgileri__ |\r\n•Sahibim = **$username[kendi idniz]**\r\n•Doğum Tarihim: **Botunuzun Oluşturulma Tarihi**\r\nPrefix: **!**\r\n\r\n\r\n| __Sunucu Bilgileri__ |\r\n•Çalışma Sürem = **$uptime**\r\n\r\n•Toplam Sunucu Sayısı = \r\n**$serverCount**\r\n\r\n•Kullanıcı Sayım = **$allMembersCount**\r\n \r\n•Pingim = **$ping**\r\n\r\n•Toplam Komut Sayım = **$commandsCount**\r\n]\r\n$footer[$username kullandı]\r\n$footerIcon[$authorAvatar]\r\n$addTimestamp\r\n$suppressErrors[Hata! Lütfen Tekrar Deneyiniz...]\r\n$color[$random[0;9999999]]\r\n$authorIcon[$authorAvatar]",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/6/2022"
+            },
+            "7LnkZmHKz4": {
+                "id": "7LnkZmHKz4",
+                "isim": "Bdfd Yavaş Mod",
+                "bilgi": "Kullanılan kanalda yavaş modu ayarlar.",
+                "kod": "\n$nomention \r\n$title[**Yavaş Mod**] $description[<@$authorID> Kanalın Yavaş Modunu Başarıyla **`$message`** Olarak Değiştirdi ✅ ] \r\n$footer[$username Yavaş Modu Ayarladı] \r\n$footerIcon[$authorAvatar] \r\n$color[FF0000] $argsCheck[>1;Yavaş Mod Ne Olucak ?] $slowmode[$channelID;$message] $onlyAdmin[Yetkin Yok KB] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/6/2022"
+            },
+            "C8BddwSmBF": {
+                "id": "C8BddwSmBF",
+                "isim": "Bdfd komut log",
+                "bilgi": "Komut log işte",
+                "kod": "\n{prefix} \r\n$nomention\r\n $description[**$username** kişisi ``$noMentionMessage`` komutunu kullandı!]\r\n $useChannel[KANAL ID] $footer[$username kullandı] $footerIcon[$authorAvatar]\r\n $color[FF0000] $title[Komut Kullanıldı!]\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/6/2022"
+            },
+            "hAOT4hKwWC": {
+                "id": "hAOT4hKwWC",
+                "isim": "Bdfd Sunucu kur",
+                "bilgi": "Otomatik sunucu kurar.",
+                "kod": "\n$nomention $onlyAdmin[Bu komutu kullanman için \"Yetkili\" olman gerek] $createChannel[--|ÖNEMLI KANALLAR|--;category] $createChannel[📋・kurallar;text;$channelID[--|ÖNEMLI KANALLAR|--]] $createChannel[📤・gelen-giden;text;$channelID[--|ÖNEMLI KANALLAR|--]] $createChannel[💾・log-kanalı;text;$channelID[--|ÖNEMLI KANALLAR|--]] $createChannel[📣・duyuru;text;$channelID[--|ÖNEMLI KANALLAR|--]] $createChannel[--|METİN KANALLARI|--;category] $createChannel[💬・Sohbet;text;$channelID[--|METİN KANALLARI|--]] $createChannel[🤖・Bot Komudu;text;$channelID[--|METİN KANALLARI|--]] $createChannel[📷・görsel-içerik;text;$channelID[--|METİN KANALLARI|--]] $createChannel[⚡・level-log;text;$channelID[--|METİN KANALLARI|--]] $createChannel[--|SES KANALLARI|--;category] $createChannel[💬・Sohbet Odası 1;voice;$channelID[--|SES KANALLARI|--]] $createChannel[💬・Sohbet Odası 2;voice;$channelID[--|SES KANALLARI|--]] $createChannel[💬・Sohbet Odası 3;voice;$channelID[--|SES KANALLARI|--]] $createChannel[💬・Sohbet Odası 4;voice;$channelID[--|SES KANALLARI|--]] $createChannel[💬・Sohbet Odası 5;voice;$channelID[--|SES KANALLARI|--]] $createChannel[--|Müzik|--;category] $createChannel[🎵・müzik-komut;text;$channelID[--|Müzik|--]] $createChannel[🎵・Müzik Odası 1;voice;$channelID[--|Müzik|--]] $createChannel[🎵・Müzik Odası 2;voice;$channelID[--|Müzik|--]] $description[Sunucu Başarıyla Kuruldu ✔] $suppressErrors[]\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/6/2022"
+            },
+            "TZdAgxpOOe": {
+                "id": "TZdAgxpOOe",
+                "isim": "Bdfd ping",
+                "bilgi": "Bdfd botun pingini gösterir.",
+                "kod": "\n(prefix)ping\r\n\r\n$nomention \r\n$title[Ping]\r\n$color[FF0000]\r\n$description[Toplam Pingim: `$ping ms`]\r\n$footer[$username#$discriminator[$authorID] Tarafından Kullanıldı.]\r\n$footerIcon[$authorAvatar]\r\n$cooldown[5s;Lütfen Bekleyin.]\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/6/2022"
+            },
+            "2Wqk8NsSHe": {
+                "id": "2Wqk8NsSHe",
+                "isim": "Sunucu Tanıt",
+                "bilgi": "Komutu Kullanan Kullanıcının Sunucusunun Linkini Destek Sunucusunda Paylaşır ",
+                "kod": "\n$nomention \r\n$useChannel[kanalid]\r\n$getServerInvite $channelSendMessage[$channelID;Sunucun Burada Tanıtıldı : ]\r\n$onlyAdmin[Sadece Yöneticiler Kullanabilir.]\r\n$cooldown[6h;Sunucunu 6 Saatte Bir Tanıtabilirsin] ",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/8/2022"
+            },
+            "oPYYPtOS9G": {
+                "id": "oPYYPtOS9G",
+                "isim": "Ayarlamasız Tavsiye",
+                "bilgi": "Kullanıcıların Tavsiyelerini İletmelerine Olanak Sağlar ",
+                "kod": "\n$nomention \r\n$title[Öneri]\r\n$description[**$username[$authorID] Adlı Kişini Önerisi;\r\n`$noMentionMessage`**]\r\n$useChannel[kanalid]\r\n$footer[$username Adlı Kişi Önerdi]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$serverIcon]\r\n$color[$random[0;99999]]\r\n$addReactions[✔;❌]",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/8/2022"
+            },
+            "wAvDHM1G7D": {
+                "id": "wAvDHM1G7D",
+                "isim": "Hazır Kurallar",
+                "bilgi": " Kural Kabul Etme Sistemi Bulunan Botlar İçin İdeal Hazır Kurallar.",
+                "kod": "\n$nomention\r\n$title[KURALLAR]\r\n$footer[kurallara uyun !]\r\n$footerIcon[$authorAvatar]\r\n$color[FF0000]\r\n$description[\r\n\r\nİnsanları Trollemek Yasak. \r\n\r\nKüfür Yasak Ceza Yersiniz. \r\n\r\nNsfw Yasak. \r\n\r\nSiyaset Kesinlikle Yasak. \r\n\r\nHer Türlü Reklam Yasaktır Ban Yersiniz Ve Bizden Küfür Yersiniz. \r\n\r\nTicaret Yasak. \r\n\r\nDolandırıcılık + Hesap Dilenme vs. Yasak.\r\n\r\nYetki Dilenmek Yasak. \r\n\r\nKavga Çıkarmak Yasak \r\n\r\nÖzel Durumlarınızı Dm'den Çözün. \r\n\r\nHerhangi Bir Sorunda @telephone_receiver・Destek Ekibi Yazın!\r\n\r\nHerkes Kuralları Okumuştur \"Ben okumadım bilmiyordum\" gibi bahaneler kabul etmiyoruz. \r\n\r\nHer kural yazmak zorunda deildir. \r\n\r\n@everyone & @here]\r\n$onlyAdmin[sadece yetkililer]",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/8/2022"
+            },
+            "CWRBakWrv6": {
+                "id": "CWRBakWrv6",
+                "isim": "Not Sistemi",
+                "bilgi": "Botunuzda Not Tutulmasını Sağlar.",
+                "kod": "\n$nomention\r\n$title[**NOT**] $setUserVar[not1;$noMentionMessage]\r\n$description[<@$authorID> başarıyla **1** not alındı 👍] $footer[$username kullandı] $footerIcon[$authorAvatar] $color[FF0000]\r\n$cooldown[5s;biraz yavaşla kanka]\r\n\r\n{prefix}not-sil\r\n$nomention\r\n$title[**NOT**] $description[**$noMentionMessage** başarıyla silindi!]\r\n$resetUserVar[$message]\r\n$footer[$username kullandı]\r\n$footerIcon[$authorAvatar]\r\n$color[FF0000]\r\n$cooldown[5s;biraz yavaşla kanka]\r\n\r\n{prefix}notum\r\n$nomention\r\n$title[**NOT**]\r\n$description[ \r\nNot 1: $getUserVar[not1] \r\nNot 2: $getUserVar[not2] \r\nNot 3: $getUserVar[not3]\r\n Not 4: $getUserVar[not4] \r\nNot 5: $getUserVar[not5] ]\r\n$color[FFFFF]\r\n$footer[$username kullandı] $footerIcon[$authorAvatar]\r\n$cooldown[5s;biraz yavaşla kanka]\r\n\r\nVariable Değerlerini Boş Bırakın. h\r\nHer Yeni Not Yeni Bir Variable Gereği Duyacaktır.",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/8/2022"
+            },
+            "gP3HH7GEaX": {
+                "id": "gP3HH7GEaX",
+                "isim": "Bdfd Kural Kabul Etmeden Komut Yasak Sistemi",
+                "bilgi": "Komut yasak",
+                "kod": "\n$nomention \r\n$title[**KURALLARI KABUL ETTİN**] \r\n$description[<@$authorID> başarıyla kurallarımı kabul ettin 💉] $footer[$username kullandı] $footerIcon[$authorAvatar] \r\n$color[F8F8F9] \r\n$addTimestamp $onlyIf[$getUserVar[okudu]!=açık;kuralları önceden kabul etmişsin !] $setUserVar[okudu;açık;$authorID]\r\n\r\n\r\nHer komuta ekleyin.\r\n$onlyIf[$getUserVar[okudu]!=kapalı;kuralları kabul etmeden komut kullanamazsın !]\r\n\r\nokudu Adında Variable Lazım Değeri kapalı olucak\r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/10/2022"
+            },
+            "bc9HI0DWbS": {
+                "id": "bc9HI0DWbS",
+                "isim": "Test",
+                "bilgi": "Qodmansna",
+                "kod": "\nTextarea düzenlemeleri yaptım test ettim .d",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/12/2022"
+            },
+            "gfeF6MY6DQ": {
+                "id": "gfeF6MY6DQ",
+                "isim": "Caps Engel",
+                "bilgi": "Büyük Harf Atılmasını Engeller.",
+                "kod": "\n$nomention \r\n$setServerVar[capsengel;yes] $description[**Caps Engel Başarıyla Açıldı ✔️**] \r\n$color[$random[0;999999]] $thumbnail[$authorAvatar] \r\n$footer[$username Kullandı] \r\n$footerIcon[$serverIcon] $onlyAdmin[Bu Komutu Sadece Yöneticiler Kullanabilir.]\r\n\r\n$nomention \r\n$color[$random[0;99999]] $setServerVar[capsengel;no] $description[**Caps Engel Başarıyla Kapatıldı** ✔️] \r\n$thumbnail[$serverIcon] \r\n$footer[$username Kullandı] \r\n$footerIcon[$authorAvatar] \r\n$onlyAdmin[Bu Komutu Sadece Yöneticiler Kullanabilir.]\r\n\r\ntrigger= A $nomention $enabled[$getServerVar[capsengel;];] $deletecommand <@$authorID> Dostum Bu Sunucuda Caps Engel Açık ! $deleteIn[2] $onlyIf[$isAdmin[$authorID]!=true;]\r\n\r\nHer Harf İçin Ayrı Komut Açmanız Gerek.\r\nVariableler;\r\ncapsengel = no",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/12/2022"
+            },
+            "YFnfQeoH7o": {
+                "id": "YFnfQeoH7o",
+                "isim": "Espiri",
+                "bilgi": "İsterseniz sizde fazladan espiri ekleyebilirsiniz.",
+                "kod": "\n$nomention\r\n$description[\r\n$randomText[Erkek Ata Ne Denir?-bayat;Telefonu 5.Kattan Düşürdüm Ama Kırılması Neden?-Çünkü Uçak Modundaydı;4.Murat Neden İntihar Etti?-Çünkü İlk 3'e Giremedi;Bi' Taksi Çevirdim Hayla Dönüyor;Tebrikler!Kazandınız, Şimdi Tencere Oldunuz!;Gûller Solar Ama Neden Sağmaz?] :D]\r\n$color[ff9000]",
+                "rank": "bdfd",
+                "dcisim": "Dexar",
+                "date": "5/14/2022"
+            },
+            "EJkykq0zN9": {
+                "id": "EJkykq0zN9",
+                "isim": "Avatar",
+                "bilgi": "Etiketlediginiz kişinin avatarını görürsünüz.",
+                "kod": "\n$nomention\r\n$color[$randomText[#f000;#FF0000]]\r\n$allowMention\r\n$argsCheck[>1; @Birini etiketle]\r\n$author[$username[$mentioned[<]]#$discriminator[$mentioned[<]]]\r\n$authorIcon[$userAvatar[$mentioned[<]]]\r\n$color[$random[0;9999]]\r\n$image[$userAvatar[$mentioned[<]]?size=2048]\r\n\r\n$addTimestamp",
+                "rank": "bdfd",
+                "dcisim": "Dexar",
+                "date": "5/14/2022"
+            },
+            "v4ExrlCORH": {
+                "id": "v4ExrlCORH",
+                "isim": "Bdfd Caps Engel",
+                "bilgi": "Büyük harf engel",
+                "kod": "\n[prefix]caps-engel aç\r\n$nomention\r\n$setServerVar[capsengel;yes] $description[**Caps Engel Başarıyla Açıldı ✔️**] \r\n$color[$random[0;999999]] $thumbnail[$authorAvatar] $footer[$username Kullandı] $footerIcon[$serverIcon] \r\n$onlyAdmin[Bu Komutu Sadece Yöneticiler Kullanabilir.]\r\n\r\n[prefix]caps-engel kapat\r\n$nomention \r\n$color[$random[0;99999]] $setServerVar[capsengel;no] $description[**Caps Engel Başarıyla Kapatıldı** ✔️] \r\n$thumbnail[$serverIcon] $footer[$username Kullandı] $footerIcon[$authorAvatar] \r\n$onlyAdmin[Bu Komutu Sadece Yöneticiler Kullanabilir.]\r\n\r\nA \r\n$nomention $enabled[$getServerVar[capsengel;];] $deletecommand \r\n<@$authorID> Dostum Bu Sunucuda Caps Engel Açık ! \r\n$deleteIn[2] $onlyIf[$isAdmin[$authorID]!=true;]\r\n\r\n\r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "aWJ5P4pPH7": {
+                "id": "aWJ5P4pPH7",
+                "isim": "Bdfd Eval",
+                "bilgi": "Eval komutu",
+                "kod": "\n$nomention \r\n$eval[$message]\r\n$onlyForIDs[Kendi ID'niz;Hata mesajı]  \r\n\r\nHerşeyi calistirmaz bide bdscript 2 yapin\r\n\r\n\r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "YwJfMnlfQb": {
+                "id": "YwJfMnlfQb",
+                "isim": "Bdfd Ayarlamalı Sa As Sistemi",
+                "bilgi": "Sa As sistemi",
+                "kod": "\n{prefix}sa-as-aç \r\n$nomention \r\n$setServerVar[saas;yes] \r\n$description[**Sa As Başarıyla Açıldı ✔️**] $color[$random[0;999999]] $thumbnail[$authorAvatar] $footer[$username Kullandı] $footerIcon[$serverIcon] \r\n$onlyAdmin[Bu Komutu Sadece Yöneticiler Kullanabilir.]\r\n\r\n\r\n\r\n{prefix}sa-as-kapat \r\n$nomention \r\n$color[$random[0;99999]] $setServerVar[saas;no]\r\n $description[**Sa As Başarıyla Kapatıldı** ✔️] \r\n$thumbnail[$serverIcon] $footer[$username Kullandı] $footerIcon[$authorAvatar] \r\n$onlyAdmin[Bu Komutu Sadece Yöneticiler Kullanabilir.]\r\n\r\n\r\nSa \r\n$nomention $enabled[$getServerVar[saas];] <@$authorID> Aleyküm Selam Hoşgeldin ! \r\n\r\nsaas diye variable değeri ise no olucak\r\n\r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "mTgt3eMrQC": {
+                "id": "mTgt3eMrQC",
+                "isim": "Bdfd Rol Kur",
+                "bilgi": "Sunucuda rol kurar",
+                "kod": "\n$onlyAdmin[Bu Komutu Kullana Bilmek İçin 'yönetici' Yetkisine Sahip Olman Gerek.] $createRole[🏆Kurucu;#7289;yes;yes] $createRole[👑Kurucu Yardımcısı;#5555dd;yes;yes] $createRole[👑Yönetici;#3498DB;yes;yes] $createRole[👑Genel Sorumlu;F09245;yes;yes] $createRole[✳️Üst Düzey Moderatör;#7C0CAE;yes;yes] $createRole[✳️Moderatör;#0f0ff;yes;yes] $createRole[📑Kayıt Sorumlusu;3aff00;yes;yes] $createRole[Deneme Moderatör;#ff0000;yes;yes] $createRole[👨Üye;#fffff;yes;yes] $createRole[🤖Bot;#E67E22;yes;yes] $title[Kurulum Tamamlandı Rollerin Yetkisini Siz Vermeniz Gerekiyor.]  \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "kEkgMj3Cbt": {
+                "id": "kEkgMj3Cbt",
+                "isim": "Bdfd Rol Kur",
+                "bilgi": "Rol kurar.",
+                "kod": "\n$onlyAdmin[Bu Komutu Kullana Bilmek İçin 'yönetici' Yetkisine Sahip Olman Gerek.] \r\n$createRole[🏆Kurucu;#7289;yes;yes] \r\n$createRole[👑Kurucu Yardımcısı;#5555dd;yes;yes] \r\n$createRole[👑Yönetici;#3498DB;yes;yes] \r\n$createRole[👑Genel Sorumlu;F09245;yes;yes] \r\n$createRole[✳️Üst Düzey Moderatör;#7C0CAE;yes;yes] \r\n$createRole[✳️Moderatör;#0f0ff;yes;yes] \r\n$createRole[📑Kayıt Sorumlusu;3aff00;yes;yes] \r\n$createRole[Deneme Moderatör;#ff0000;yes;yes] \r\n$createRole[👨Üye;#fffff;yes;yes] \r\n$createRole[🤖Bot;#E67E22;yes;yes] \r\n$title[Kurulum Tamamlandı Rollerin Yetkisini Siz Vermeniz Gerekiyor.]  \r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "lOmS4cz1JB": {
+                "id": "lOmS4cz1JB",
+                "isim": "Bdfd Gelişmiş Yardım",
+                "bilgi": "Gelişmiş yardım",
+                "kod": "\n$nomention \r\n$title[**Bot İsmi | Yardım Menüsü**]\r\n$description[\r\n\r\nBot Yapımcım: <@kendi idniz>\r\n\r\nPrefixim: (prefixiniz)\r\n\r\n\r\n$addField[Moderasyon;!moderasyon]\r\n$addField[Eğlence;!eğlence]\r\n$addField[Kayıt Sistemi;!kayıt]\r\n$addField[Kullanıcı;!kullanıcı]\r\n\r\n\r\n\r\n\r\n**Yama Notları:**\r\n`Ban komutu eklendi.`\r\n`Unban komutu eklendi.`\r\n`kick komutu eklendi.`]\r\n\r\n$image[https://cdn.discordapp.com/attachments/539066238870224903/606135147913543693/Tw_1-1-1.gif]\r\n$color[$random[0;9999999]]\r\n$footer[$username kullandı]\r\n$footerIcon[$authorAvatar]\r\n$botTyping\r\n$addTimestamp\r\n$addReactions[✅]\r\n\r\n$addButton[yes;Botunuzun davet linki;Botu Davet Et;link;no;🏅]\r\n$addButton[no;Destek sunucusu linki;Destek Sunucuna Katılmak İçin Tıkla;link;no;🛠]\r\n$suppressErrors[Hata!] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "j6awQxZ9jn": {
+                "id": "j6awQxZ9jn",
+                "isim": "Sunucu Logo",
+                "bilgi": "Sunucunun Logosunu Komutun Kullanıldığı Kanala Atar",
+                "kod": "\n$nomention\r\n$title[**Sunucu Logo**]\r\n$description[Sunucunun Logosu:]\r\n$image[$serverIcon]\r\n$footer[$username kullandı]\r\n$addTimestamp\r\n$footerIcon[$authorAvatar]\r\n$color[0;9999999] \r\n",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/15/2022"
+            },
+            "Kv2vYEg0cu": {
+                "id": "Kv2vYEg0cu",
+                "isim": "Butonlu Yardım",
+                "bilgi": "Yardım Menüsü Fakat Butonlu Hali.",
+                "kod": "\n(prefix)yardım\r\n$nomention\r\n$description[<@$authorID> Hangi Menüye Yönlendirmemi İstersin? Butonlardan Birine Tıkla!] $addButton[no;moderasyon;Moderasyon;Primary;no;] $addButton[no;eğlence;Eğlence;Primary;no;] $addButton[no;ekonomi;Ekonomi;Primary;no;] $addButton[no;kullanıcı;Kullanıcı;Primary;no;] $color[$random[0;99999]]\r\n\r\n$onInteraction[kullanıcı]\r\n$nomention\r\n$description[ **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması**] $color[$random[0;99999]]\r\n\r\n$onInteraction[moderasyon]\r\n$nomention\r\n$description[ **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması**]\r\n$color[$random[0;99999]]\r\n\r\n$onInteraction[ekonomi]\r\n$nomention \r\n$description[ **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması**] $color[$random[0;99999]] \r\n\r\n$onInteraction[eğlence]\r\n$nomention\r\n$description[ **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması**] $color[$random[0;99999]] ",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/15/2022"
+            },
+            "RxAYYCJHh3": {
+                "id": "RxAYYCJHh3",
+                "isim": "Ban",
+                "bilgi": "Etiketlenen Kullanıcıyı Yasaklar",
+                "kod": "\n$nomention\r\n$ban[$mentioned[1]] $channelSendMessage[$channelID;<@$authorID> Başarıyla <@$mentioned[1]> Adlı Kişiyi Yasakladım ✅ ]\r\n$dm[$mentioned[1]]\r\n$title[Banlandın]\r\n$description[ **Bir Sunucudan Yasaklandın** Yasaklayan = <@$authorID> Seni Yasaklama Sebebi = $message]\r\n$footer[$username Yasakladı] $footerIcon[$authorAvatar] $color[$random[0;99999]]\r\n$onlyPerms[ban;Bu Komutu Kullanabilmek İçin **`Üyeleri Yasakla`** İznine Sahip Olmalısın] $color[$random[0;99999]] \r\n",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/15/2022"
+            },
+            "2T4vngNktn": {
+                "id": "2T4vngNktn",
+                "isim": "Sil",
+                "bilgi": "Belirtilen Miktarda Mesajı Siler.",
+                "kod": "\n$nomention\r\n$description[**$username `$message`** Kadar Mesajı Sildi ✅ ]\r\n$clear[$message] \r\n$deletecommand\r\n$argsCheck[>1;Ne Kadar Mesajı Sileceksin :D ?] $color[$random[0;999999]]\r\n$onlyPerms[managemessages;Bu komutu kullanamazsın.] \r\n",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/15/2022"
+            },
+            "ItFgW3j4Zl": {
+                "id": "ItFgW3j4Zl",
+                "isim": "Force Ban",
+                "bilgi": "Sunucudan çıkan Kullanıcıları ID Numarasi İle Yasaklarsınız.",
+                "kod": "\n$nomention\r\n$banID[$message]\r\n$title[Force Ban]\r\n$description[`$username[$message]#$discriminator[$message]` Adlı Kullanıcı Başarıyla Sunucudan Yasaklandı ✅]\r\n$footer[$username Kullandı]\r\n$footerIcon[$authorAvatar]\r\n$color[$random[0;999999]]\r\n$onlyAdmin[Bu Komutu Sadece Yöneticiler Kullanabilir.]\r\n$onlyIf[$isNumber[$message[1]]!=false;Bir ID Girmelisin.]",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/15/2022"
+            },
+            "fvQYYEcqmM": {
+                "id": "fvQYYEcqmM",
+                "isim": "Yavaş Mod",
+                "bilgi": "Kanal Yavaş modunu ayarlar.",
+                "kod": "\n$nomention\r\n$title[**Yavaş Mod**] $description[<@$authorID> Kanalın Yavaş Modunu Başarıyla **`$message`** Olarak Değiştirdi ✅ ] \r\n$footer[$username Yavaş Modu Ayarladı]\r\n$footerIcon[$authorAvatar] \r\n$color[FF0000]\r\n$argsCheck[>1;Yavaş Mod Ne Olucak ?] $slowmode[$channelID;$message] $onlyAdmin[Yetkin Yok KB] \r\n",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/15/2022"
+            },
+            "Xs1z6Hpnjt": {
+                "id": "Xs1z6Hpnjt",
+                "isim": "Botlist Sistemi",
+                "bilgi": "Botlist sunuculari için bir sistem",
+                "kod": "\nPrefix}başvur\r\n$nomention \r\n$deletecommand \r\n$argsCheck[>1;kankam id , prefix ve 0 perm link at yaz!] \r\n$description[<@$authorID> kişisi botuyla başvurdu! **Bilgileri:** $noMentionMessage] \r\n$onlyForChannels[$getServerVar[bkanal];Sadece <#$getServerVar[bkanal]> Kanalında Kullanabilirsin.]\r\n$footer[$username başvurdu!] $footerIcon[$authorAvatar]\r\n$color[FF0000] \r\n$useChannel[$getServerVar[blog]]\r\n\r\n{Prefix}başvur\r\n$nomention\r\n$description[başarıyla gönderildi!]\r\n\r\n{Prefix}kabul-et\r\n$nomention\r\n$argsCheck[>1;hangi kullanıcının botunu onaylicaksin | s!kabul-et <@kullanıcı>] $title[Kabul edildi!] $useChannel[$getServerVar[rlog]] $description[<@$mentioned[<]> kişisinin botu <@$authorID> tarafından kabul edildi!] $footer[$username Kabul etti] $footerIcon[$authorAvatar]\r\n$color[f8f8f9]\r\n\r\n{Prefix}reddet\r\n$nomention\r\n$title[Rededildi!] $useChannel[$getServerVar[rlog]] $description[<@$mentioned[<]> kişisinin <@$authorID> yetkili kişi reddetti sebep: $noMentionMessage]\r\n$footer[$username reddetti] $footerIcon[$authorAvatar]\r\n$color[f8f8f9]\r\n\r\n{Prefix}bot-log-ayarla\r\n$nomention\r\n$title[Log Ayarlandı!]\r\n$argsCheck[>1;kanal etiketle!] $onlyAdmin[yetkin yok]\r\n$description[bot log başarıyla ayarlandı!] $footer[$username kullandı!] $footerIcon[$authorAvatar]\r\n$color[F8F8F9] $setServerVar[blog;$mentionedChannels[1]]\r\n\r\n{Prefix}red-kabul-log-ayarla\r\n$nomention\r\n$argsCheck[>1;kanal etiketle!] $onlyAdmin[yetkin yok]\r\n$title[log ayarlandı]\r\n$description[log başarıyla ayarlandı!] $footer[$username kullandı!] $footerIcon[$authorAvatar] $setServerVar[rlog;$mentionedChannels[1]] \r\n$color[FF0000]\r\n\r\n{Prefix}b-kanalı-ayarla\r\n$nomention\r\n$argsCheck[1;Kanal Gir] $setServerVar[bkanal;$mentionedChannels[1]] \r\n$color[F8F8F9]\r\n$footer[$username kullandı!] \r\n$footerIcon[$authorAvatar] $title[Kanal Tamamdır!]\r\n$description[Kanal Ayarlandı!]\r\n\r\nVariablelar \r\nblog = 0 \r\nrlog = 0\r\nbkanal = 0\r\n\r\n\r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/15/2022"
+            },
+            "8STctvTtlw": {
+                "id": "8STctvTtlw",
+                "isim": "Tag Sistemi ",
+                "bilgi": "Tag Sunucuları İçin Tag Sistemi",
+                "kod": "\n{Prefix}tag-ayarla\r\n$nomention\r\n$onlyAdmin[Yetkin Yetersiz] $description[Tagınız $message olarak ayarlandı.]\r\n$setServer[stag;$message]\r\n$footer[$username kullandı]\r\n$deleteIn[60s]\r\n\r\n{Prefix}tag-sıfırla\r\n$nomention\r\n$onlyAdmin[Yetkin Yetersiz]\r\n$description[Tag Sistemi Sıfırlandı!] $resetServerVar[stag]\r\n$color[FF0000]\r\n\r\nTetikleyiciye tag yazın. Kod ;\r\n$nomention\r\n$getServerVar[stag]\r\n$cooldown[2s;]\r\n\r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "! Pakrez¿",
+                "date": "5/15/2022"
+            },
+            "vaMaWDbAoJ": {
+                "id": "vaMaWDbAoJ",
+                "isim": "Bdfd Sunucu Logo",
+                "bilgi": "Sunucu logosu gösterir",
+                "kod": "\n$nomention\r\n$title[**Sunucu Logo**]\r\n$description[Sunucunun Logosu:]\r\n$image[$serverIcon]\r\n$footer[$username kullandı]\r\n$addTimestamp\r\n$footerIcon[$authorAvatar]\r\n$color[0;9999999] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "s1VvGPWqUH": {
+                "id": "s1VvGPWqUH",
+                "isim": "Bdfd butonlu yardım ",
+                "bilgi": "Butonlu yardım ",
+                "kod": "\n(prefix)yardım\r\n $nomention \r\n$description[<@$authorID> Hangi Menüye Yönlendirmemi İstersin? Butonlardan Birine Tıkla!] \r\n$addButton[no;moderasyon;Moderasyon;Primary;no;] \r\n$addButton[no;eğlence;Eğlence;Primary;no;] \r\n$addButton[no;ekonomi;Ekonomi;Primary;no;] \r\n$addButton[no;kullanıcı;Kullanıcı;Primary;no;] \r\n$color[$random[0;99999]]\r\n\r\n\r\n\r\n$onInteraction[kullanıcı] \r\n$nomention\r\n $description[ **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması**] \r\n$color[$random[0;99999]]\r\n\r\n\r\n\r\n$onInteraction[moderasyon]\r\n $nomention\r\n $description[ **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması**] \r\n$color[$random[0;99999]]\r\n\r\n\r\n\r\n$onInteraction[ekonomi]\r\n$nomention \r\n$description[ **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması**] \r\n$color[$random[0;99999]] \r\n\r\n\r\n\r\n$onInteraction[eğlence] \r\n$nomention \r\n$description[ **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması** **Komut Adı – Açıklaması**] \r\n$color[$random[0;99999]] \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "I0YzvewtaG": {
+                "id": "I0YzvewtaG",
+                "isim": "Bdfd Ban",
+                "bilgi": "Kullanıcı banlar",
+                "kod": "\n$nomention \r\n$ban[$mentioned[1]] \r\n$channelSendMessage[$channelID;<@$authorID> Başarıyla <@$mentioned[1]> Adlı Kişiyi Yasakladım ✅ ] \r\n$dm[$mentioned[1]] \r\n$title[Banlandın] \r\n$description[ **Bir Sunucudan Yasaklandın** Yasaklayan = <@$authorID> Seni Yasaklama Sebebi = $message] \r\n$footer[$username Yasakladı] \r\n$footerIcon[$authorAvatar] \r\n$color[$random[0;99999]] \r\n$onlyPerms[ban;Bu Komutu Kullanabilmek İçin **`Üyeleri Yasakla`** İznine Sahip Olmalısın] \r\n$color[$random[0;99999]] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/15/2022"
+            },
+            "b3EJ0qa3ag": {
+                "id": "b3EJ0qa3ag",
+                "isim": "Profil",
+                "bilgi": "Etiketlenen Kullanıcının Hesap Bilgilerini Atar (Hesap Kuruluş Tarihi, Dm Açıkmı? vb.)",
+                "kod": "\n$nomention\r\n$thumbnail[$userAvatar[$mentioned[1;yes]]]\r\n$title[$username[$mentioned[1;yes]]#$discriminator[$mentioned[1;yes]] Bilgileri]\r\n$color[ffff00]\r\n$description[\r\n**Mentions** : <@$mentioned[1;yes]>\r\n**Kullanıcı Adı** : $username[$mentioned[1;yes]]#$discriminator[$mentioned[1;yes]]\r\n**DM Açık mı? ** : $isUserDMEnabled[$mentioned[1;yes]]\r\n**Admin** : $isAdmin[$mentioned[1;yes]]\r\n**ID** : $mentioned[1;yes]\r\n**Bu bir Botmu** : $isBot[$mentioned[1;yes]]\r\n**Roller** : ⤵⤵⤵⤵⤵\r\n$userRoles[$mentioned[1;yes]]]\r\n",
+                "rank": "bdfd",
+                "dcisim": "HzSwendy",
+                "date": "5/16/2022"
+            },
+            "n82jBJqEHt": {
+                "id": "n82jBJqEHt",
+                "isim": "Rozet Sistemi",
+                "bilgi": "Profildeki Rozetleri Gösterir (Dev, Vip Vb.)",
+                "kod": "\n{prefix}rozetbak\r\n$nomention\r\n$title[$username | Profil Bilgileri]\r\n$description[\r\nDeveloper Rozeti: $getVar[dev;$authorID]\r\n\r\nV.I.P Rozeti: $getVar[vip;$authorID]]\r\n$footer[$username kullandı]\r\n$botTyping\r\n$footerIcon[$authorAvatar]\r\n$color[$random[0;9999999]]\r\n\r\n{prefix}rozet-ver\r\n$nomention\r\n$argsCheck[>1;birini etiketlemen gerekiyor.]\r\n$suppressErrors[birşeyler ters gitti.]\r\n$onlyForIDs[kendi idniz;sahibime özel!]\r\n$title[**Dev Rozeti**]\r\n$description[Sahibim <@$authorID> $message[1] adlı kişiye developer rozeti verdi!]\r\n$footer[$username | developer]\r\n$footerIcon[$authorAvatar]\r\n$setVar[dev;bulunuyor.;$mentioned[1]]\r\n\r\n{prefix}rozetal\r\n$nomention\r\n$argsCheck[>1;birini etiketlemen gerekiyor.]\r\n$suppressErrors[birşeyler ters gitti.]\r\n$onlyForIDs[kendi idniz;sahibime özel!]\r\n$title[**Dev Rozeti**]\r\n$description[Sahibim <@$authorID> $message[1] adlı kişiden developer rozeti geri alındı!]\r\n$footer[$username | developer]\r\n$footerIcon[$authorAvatar]\r\n$setVar[dev;bulunmuyor.;$mentioned[1]]\r\n\r\ndev al dev veri vip içinde yapabilirsiniz sadece değiştirmeniz gereken yerler $setVar[vip;bulunuyor;$mentioned[1]] olarak değiştirmektir.\r\n\r\nKendi idniz Yazan yerlere idnizi yapıştırın.\r\n\r\nDeğiskenler;\r\nvip = bulunmuyor.\r\ndev = bulunmuyor.",
+                "rank": "bdfd",
+                "dcisim": "Pakrez¿",
+                "date": "5/19/2022"
+            },
+            "5IqOnU7rHP": {
+                "id": "5IqOnU7rHP",
+                "isim": "Anket",
+                "bilgi": "Anket oluşturursunuz",
+                "kod": "\n{prefix}anket\r\n$nomention \r\n$argsCheck[>1;anketi gir.]\r\n$argsCheck[>2;Anket başlığını gir.]\r\n$title[$message[2]]\r\n$description[$username adlı kişinin anketi:\r\n\r\n$message[1]]\r\n$footer[$username kullandı]\r\n$footerIcon[$authorAvatar]\r\n$botTyping\r\n$addTimestamp \r\n$addReactions[✅;❎]\r\n$onlyAdmin[Sadece `Yönetici` yetkisi olan kişiler kullanabilir.] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Pakrez¿",
+                "date": "5/19/2022"
+            },
+            "Sg97ihSzOh": {
+                "id": "Sg97ihSzOh",
+                "isim": "Nuke",
+                "bilgi": "Bütün mesajları silersiniz",
+                "kod": "\n{prefix}nuke\r\n$nomention\r\n$deletecommand\r\n$clear[99999999999999999]\r\n$description[$username bütün mesajları sildi!]\r\n$image[https://media.tenor.com/images/04dc5750f44e6d94c0a9f8eb8abf5421/tenor.gif]\r\n$footer[$username kullandı]\r\n$title[BOOOOM]\r\n$onlyAdmin[yetkin yok]\r\n$deleteIn[5s] ",
+                "rank": "bdfd",
+                "dcisim": "Pakrez¿",
+                "date": "5/19/2022"
+            },
+            "TZIfVvvCaH": {
+                "id": "TZIfVvvCaH",
+                "isim": "Emojili Sa-As",
+                "bilgi": "Selam verildiğinde emojili bir şekilde as der.",
+                "kod": "\n{prefix}emojili-sa-as aç\r\n$nomention\r\n$setServerVar[saas;yes]\r\n$description[**Emojili Sa As Başarıyla Açıldı ✔️**]\r\n$color[ff000]\r\n$thumbnail[$authorAvatar] $footer[$username Kullandı] $footerIcon[$serverIcon]\r\n$onlyAdmin[**Bu Komutu Sadece** `Yöneticiler` **Kullanabilir.**]\r\n\r\n{prefix}emojili-sa-as kapat\r\n$nomention \r\n$color[ff000]\r\n$setServerVar[saas;no]\r\n$description[**Emojili Sa As Başarıyla Kapatıldı** ✔️]\r\n$thumbnail[$serverIcon]\r\n$footer[$username Kullandı] \r\n$footerIcon[$authorAvatar]\r\n$onlyAdmin[**Bu Komutu Sadece** `Yöneticiler` **Kullanabilir.**]\r\n\r\nTetikleyiciye Sa yazın sonra kod;\r\n$nomention\r\n$enabled[$getServerVar[saas;];] $addCmdReactions[🇦;🇸] $onlyIf[$message==;]\r\n\r\n\r\nsaas Adında Variable Lazım, Değeri no Olacak.",
+                "rank": "bdfd",
+                "dcisim": "Pakrez¿",
+                "date": "5/19/2022"
+            },
+            "scBOhCdVK8": {
+                "id": "scBOhCdVK8",
+                "isim": "Premium Sistemi",
+                "bilgi": "Premium Sistemi Kodu Sadece Premium Alan Kişi Kullanır ",
+                "kod": "\n{prefix}pre-ver\r\n$nomention\r\n$title[**Premium Sistemi**]\r\n$description[<@$authorID> adlı kişi <@$mentioned[1]> adlı kişiye V.I.P verdi.]\r\n$footer[$username kullandı]\r\n$footerIcon[$authorAvatar]\r\n$color[$random[0;9999999]]\r\n$setVar[vip;var;$mentioned[1]]\r\n$addTimestamp \r\n$onlyForIDs[kendi idniz;Sadece Sahibime Özel!]\r\n\r\n{prefix}pre-al\r\n$nomention\r\n$title[**Premium Sistemi**]\r\n$description[<@$authorID> adlı kişi <@$mentioned[1]> adlı kişiden V.I.P aldı.]\r\n$footer[$username kullandı]\r\n$footerIcon[$authorAvatar]\r\n$color[$random[0;9999999]]\r\n$setVar[vip;yok;$mentioned[1]]\r\n$addTimestamp \r\n$onlyForIDs[kendi idniz  Sahibime Özel!]\r\n\r\n\r\nVip Komutların Altına\r\n$onlyIf[$getVar[vip;$authorID]==var;bu komut **V.I.P** komutudur **V.I.P** olmadan komutu kullanamazsınız.]\r\n\r\nBunu Ekleyiniz",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "nueZtfWt6m": {
+                "id": "nueZtfWt6m",
+                "isim": "Ayarlamalı Otorol Sistemi",
+                "bilgi": "Sunucuya Girene Rol Verir ",
+                "kod": "\n{Prefix}otorol-ayarla\r\n\r\n$nomention \r\n$title[Otorol]\r\n$description[$username otorol başarıyla ayarlandı!]\r\n$footer[$username kullandı!]\r\n$footerIcon[$authorAvatar]\r\n$onlyAdmin[Sadece Yetkililer Yapabilir]\r\n$setServerVar[otorol;\r\n$mentionedRoles[1]]\r\n$setServerVar[otorolog;\r\n$mentionedChannels[1]]\r\n$color[f8f8f9]\r\n\r\n\r\n$onJoined[$getServerVar[otorolog]]\r\n\r\n$nomention \r\n$title[Yeni Kişi Geldi!]\r\n$description[Aramıza Yeni Üye Katıldı! **<@$getServerVar[otorol] Rolü Başarıyla Verildi!**]\r\n$giveRole[$authorID;\r\n$getServerVar[otorol]]\r\n$footer[$username kullandı!]\r\n$footerIcon[$authorAvatar]\r\n$useChannel[$getServerVar[otorolog]]\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "K1vYbzZ0jH": {
+                "id": "K1vYbzZ0jH",
+                "isim": "Bdfd Tavsiye Sistemi",
+                "bilgi": "Tavsiye Yaparsınız ",
+                "kod": "\n{Prefix}tavsiye-log-ayarla\r\n\r\n$nomention\r\n$onlyAdmin[Sadece Yetkililer Kullanılır!]\r\n$description[Tavsiye Log ayarlandı!]\r\n$setServerVar[slog;$mentionedChannels[1]]\r\n$color[F8F8F9]\r\n$footer[$username kullandı]\r\n$footerIcon[$authorAvatar]\r\n$title[Log Ayarlandı]\r\n\r\n\r\n{Prefix}tavsiye-gönder\r\n$nomention \r\n$addReactions[👍;👎]\r\n$title[Birsey Yazıldı!]\r\n$description[**Mesaj Atan:** $username\r\n**Mesajı:** $noMentionMessage]\r\n$useChannel[$getServerVar[slog]]\r\n$color[FF0000]\r\n$footer[$username önerdi]\r\n\r\n\r\nslog adlı variable lazım değeri boş",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "HhvGh1q9cn": {
+                "id": "HhvGh1q9cn",
+                "isim": "Bdfd Profil",
+                "bilgi": "Profil bilgilerine bakar",
+                "kod": "\n{prefix}profil\r\n$nomention\r\n\r\n$title[**Hesap Bilgi | 📎**]\r\n\r\n$addField[🧮•Hesap Kurulum :;\r\n•$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$creationDate[$mentioned[1]];1;1️⃣;9];2;2️⃣;9];3;3️⃣;9];4;4️⃣;9];5;5️⃣;9];6;6️⃣;9];7;7️⃣;9];8;8️⃣;9];9;9️⃣;9];0;0️⃣;9];-;⬛;9]]\r\n\r\n$addField[🔢•ID :;\r\n•`$mentioned[1]`]\r\n\r\n$addField[🏷️•Tam Nickname :;\r\n•`$username[$mentioned[1]]#$discriminator[$mentioned[1]]`]\r\n\r\n$addField[👀•DM Açıklık :;\r\n•`$replaceText[$replaceText[$isUserDMEnabled[$mentioned[1]];true;Olumlu✓;2];false;olumsuz×;2]`]\r\n\r\n$addField[🤖•Bu Bir Botmu :;\r\n•`$replaceText[$replaceText[$isBot[$mentioned[1]];true;Olumlu✓;2];false;olumsuz×;2]`]\r\n\r\n$addField[🏠•Sunucuya Katılım :;\r\n•$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$userJoined[$mentioned[1]].;1;1️⃣;9];2;2️⃣;9];3;3️⃣;9];4;4️⃣;9];5;5️⃣;9];6;6️⃣;9];7;7️⃣;9];8;8️⃣;9];9;9️⃣;9];0;0️⃣;9]]]\r\n\r\n$addField[📑•Rolleri :;`$userRoles[$mentioned[1]]`]\r\n\r\n$footer[$username İstedi]\r\n$footerIcon[$authorAvatar]\r\n$addTimestamp\r\n$thumbnail[$userAvatar[$mentioned[1]]]\r\n\r\n\r\n$color[$random[0;99999]]\r\n$suppressErrors[**Birini etiketle!!**]\r\n\r\n// komut dilini BdScript Unstable alınız!! //\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "2QboNHYJfq": {
+                "id": "2QboNHYJfq",
+                "isim": "Butonlu Ticket",
+                "bilgi": "Butonlu Ticket Sistemi ",
+                "kod": "\n{prefix}ticket\r\n$nomention\r\n$title[**Butonlu Ticket Sistemi**]\r\n$description[**Selam Değerli Üye Sunucuda Herhangi Bir Sorun Veya Aklında Birşey Kaldıysa Bize Ulaşmak İçin Butona Tıkla!**]\r\n$footer[Ticket Sistemi]\r\n$color[$random[0;9999999]]\r\n$addButton[yes;Ticket;Ticket;success;no;] \r\n$onlyPerms[admin;Bu komutu çalıştırabilmek için `Yönetici` iznine sahip olmanız gerekmektedir!]\r\n$onlyIf[$message==;]  \r\n\r\n$onInteraction[Ticket]\r\n$nomention\r\n$newTicket[Ticket Sistemi;;Bize sorununuzu bildirin! Yakında destek ekibimiz sizinle iletişime geçecektir;<@$authorID> {channel} Kanalından özel destek alabilirsiniz ;Hatayı çok aradım ama bulamadım :(]\r\n$color[$random[0;9999999]] \r\n\r\n$onInteraction[ticketk]\r\n$nomention\r\n$title[Ticket Sistemi]\r\n$description[gercekten kapatmak istiyormusun?]\r\n$addButton[yes;ticketk;Ticket'ı Kapat;danger;no;]\r\n$color[$random[0;9999999]] ",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "ABwwIlTLmL": {
+                "id": "ABwwIlTLmL",
+                "isim": "Bdfd Botlist Sistemi",
+                "bilgi": "Gelişmiş botlist sistemi ",
+                "kod": "\n{prefix}bot-ekle\r\n$nomention\r\n\r\n\r\n$useChannel[$getServerVar[b-log]]\r\n$title[**Bot Eklendi | ✅**]\r\n$description[**\r\n••| Bilgiler / 📒 |••\r\n\r\n••| 👨‍🎨Bot Sahibi :\r\n••| <@$authorID>\r\n••| 🔢ID :\r\n••| `$authorID`\r\n--------------------\r\n••| 🔍Bot Bilgi :\r\n••| `$username[$message[1]]#$discriminator[$message[1]]`\r\n••| 📦ID :\r\n••| `$message[1]`\r\n[0 Perm Daveti](https://discord.com/oauth2/authorize?client_id=$message[1]&scope=bot&permissions=0)\r\n\r\n[8 Perm Daveti](https://discord.com/oauth2/authorize?client_id=$message[1]&scope=bot&permissions=8)\r\n---------------------\r\n••| 🤖Prefix :\r\n••| `$message[2]`\r\n**]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$userAvatar[$message[1]]]\r\n$addTimestamp\r\n$suppressErrors[]\r\n$onlyIf[$message[2]!=;]\r\n\r\n\r\n{prefix}bot-ekle\r\n$nomention\r\n\r\n\r\n$useChannel[$getServerVar[b-kanal]]\r\n$deletecommand\r\n$description[**\r\n`$username[$message[1]]#$discriminator[$message[1]]` adlı bot listeye alındı!**]\r\n$suppressErrors[**Bu ID'ye sahip bir bot bulunamadı!!**]\r\n\r\n$onlyIf[$getServerVar[b-yetkili]!=;**Yetkili rolü ayarlanmamış!!**]\r\n\r\n$onlyIf[$getServerVar[b-log]!=;**Bot log ayarlanmamış!!**]\r\n\r\n$onlyIf[$getServerVar[b-kanal]!=;**Botlist kanalı ayarlanmamış!!**]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$userAvatar[$message[1]]]\r\n$addTimestamp\r\n\r\n$onlyIf[$message[2]!=;**Lütfen prefixi giriniz!!**]\r\n\r\n{prefix}onay\r\n$nomention\r\n\r\n$description[**\r\n••| Bot Onaylandı / 📋 |••\r\n\r\n••| Yetkili : \r\n••| <@$authorID>\r\n\r\n••| Bilgi :\r\n••| `$username[$message[1]]#$discriminator[$message[1]]` adlı bot onaylandı!!**]\r\n\r\n$useChannel[$getServerVar[b-log]]\r\n\r\n$onlyForRoleIDs[$getServerVar[b-yetkili];**Bu işlemi yapabilmek için <@&$getServerVar[b-yetkili]> Rolünün olması gerekiyor!!**]\r\n\r\n$onlyIf[$getServerVar[b-yetkili]!=;**Yetkili rolü ayarlanmamış!!**]\r\n\r\n$onlyIf[$getServerVar[b-log]!=;**Bot log ayarlanmamış!!**]\r\n\r\n$onlyIf[$getServerVar[b-kanal]!=;**Botlist kanalı ayarlanmamış!!**]\r\n$suppressErrors[**Böyle bir ID'ye sahip bir bot bulunamadı!!**]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$userAvatar[$message[1]]]\r\n$addTimestamp\r\n\r\n{prefix}red\r\n$nomention\r\n\r\n$description[** \r\n••| Bot Reddedildi / 🚧 |••\r\n\r\n••| 🤖Yetkili :\r\n••| <@$authorID>\r\n\r\n••| 📋Bilgiler :\r\n••| `$username[$message[1]]#$discriminator[$message[1]]` adlı bot reddedildi \r\n\r\n••| 🔌Sebep :\r\n••| `$noMentionMessage`\r\n**]\r\n\r\n$useChannel[$getServerVar[b-log]]\r\n\r\n$suppressErrors[**Böyle bir ID'ye sahip bir bot bulunamadı!!**]\r\n\r\n$onlyIf[$getServerVar[b-yetkili]!=;**Yetkili rolü ayarlanmamış!!**]\r\n\r\n$onlyIf[$getServerVar[b-log]!=;**Bot log ayarlanmamış!!**]\r\n\r\n$onlyIf[$getServerVar[b-kanal]!=;**Botlist kanalı ayarlanmamış!!**]\r\n\r\n$onlyForRoleIDs[$getServerVar[b-yetkili];**Bu işlemi yapabilmek için <@&$getServerVar[b-yetkili]> Rolünün olması gerekiyor!!**]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$userAvatar[$message[1]]]\r\n$addTimestamp\r\n\r\n{prefix}bot-yetkili\r\n$nomention\r\n\r\n\r\n\r\n$onlyIf[$mentionedRoles[1]!=;**Bir rol etiketle!!**]\r\n\r\n$title[**Yetkili Rol | 👮**]\r\n$description[**\r\n••| Ayarlanan / 🎗️ |••\r\n\r\n••| 🎴Yetkili :\r\n••| <@$authorID>\r\n\r\n••| 🚧Ayarlanan Rol :\r\n••| <@&$mentionedRoles[1]>\r\n**]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$serverIcon]\r\n$addTimestamp\r\n$setServerVar[b-yetkili;$mentionedRoles[1]]\r\n$suppressErrors[ ] \r\n$onlyAdmin[**!! Maalesef bu komutu kullanabilmek için `Yönetici` izniniz olmalıdır. !!**]\r\n\r\n{prefix}bot-log\r\n$nomention\r\n\r\n\r\n$onlyIf[$mentionedChannels[1]!=;**Bir kanal etiketle!!]\r\n\r\n$onlyIf[$mentionedChannels[1]!=$getServerVar[b-log];**Bot log kanalı ile komut kanalı aynı olamaz!!!**]\r\n\r\n$title[**Log Ayarlandı | 🚪**]\r\n$description[**\r\n••| Dökümanlar / 🎀 |••\r\n\r\n••| 👮Yetkili :\r\n••| <@$authorID>\r\n\r\n••| 💻Log kanal :\r\n••| <#$mentionedChannels[1]>\r\n**]\r\n$setServerVar[b-log;$mentionedChannels[1]]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$serverIcon]\r\n$addTimestamp\r\n$onlyAdmin[**!! Maalesef bu komutu kullanabilmek için `Yönetici` izniniz olmalıdır. !!**]\r\n\r\n{prefix}bot-kanal\r\n$nomention\r\n\r\n$onlyIf[$mentionedChannels[1]!=;**Bir kanal etiketle!!**]\r\n\r\n$onlyIf[$mentionedChannels[1]!=$getServerVar[b-log];**Bot log kanalı ile komut kanalı aynı olamaz!!!**]\r\n\r\n\r\n$title[**BotList Kanalı | 💻**]\r\n$description[**\r\n••| BotList Ayarlandı / 🤖 |••\r\n\r\n••| 👮Yetkili :\r\n••| <@$authorID>\r\n\r\n••| 📒BotList Kanalı :\r\n••| <#$mentionedChannels[1]>\r\n**]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$serverIcon]\r\n$addTimestamp\r\n$setServerVar[b-kanal;$mentionedChannels[1]]\r\n$onlyAdmin[**!! Maalesef bu komutu kullanabilmek için `Yönetici` izniniz olmalıdır. !!**]\r\n\r\n{prefix}reset\r\n$nomention\r\n\r\n$onlyAdmin[**Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olman gerekiyor!!**]\r\n$resetServerVar[b-log]\r\n$resetServerVar[b-yetkili]\r\n$resetServerVar[b-kanal]\r\n$title[**Sistem Silindi | 💤**]\r\n\r\n$description[**\r\n••| Dosyalar / 📋 |••\r\n\r\n••| 👮Yetkili :\r\n••| <@$authorID>\r\n\r\n••| 📂Silinen dosyalar :\r\n••| `BotList Yetkili Rol`\r\n••| `Botlist kanalı`\r\n••| `Bot Log`\r\n**]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$serverIcon]\r\n$addTimestamp\r\n\r\n{prefix}botlist-yardım\r\n$nomention\r\n$title[**BotList Sistemi • 📦**]\r\n\r\n$description[**\r\n•••| Bot Komutları • 🔍 |•••\r\n\r\n• [prefix]bot-ekle <ID> <prefix>\r\n\r\n===================\r\n• [prefix]onay <ID>\r\n\r\n• [prefix]red <ID>\r\n===================\r\n•••| Yönetici+ Komut • ⛩️ |•••\r\n\r\n• [prefix]bot-yetkili <@rol>\r\n\r\n• [prefix]bot-log <#kanal>\r\n\r\n• [prefix]bot-kanal <#kanal>\r\n\r\n• [prefix]reset\r\n====================\r\n`\r\n$username[$botID] • BotList Sistemi \r\n`\r\n**]\r\n$footer[$username İstedi]\r\n$color[$random[0;99999]]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$serverIcon]\r\n$addTimestamp\r\n\r\n\r\nVariableler • 🔍\r\n\r\nb-log = {Değer boş}\r\nb-yetkili = {Değer boş}\r\nb-kanal = {Değer boş}\r\n\r\n// Kısaca tüm variables değerleri boş!! //\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "04wXlMGcgS": {
+                "id": "04wXlMGcgS",
+                "isim": "Bdfd Avatar",
+                "bilgi": "Kullanıcının pp sini gösterir ",
+                "kod": "\n{prefix}avatar\r\n$nomention\r\n$allowMention\r\n$title[Avatar]\r\n$authorIcon[$userAvatar[$mentioned[1;yes]]]\r\n$color[$random[0;9999]]\r\n$image[$userAvatar[$mentioned[1;yes]]?size=2048]\r\n$footer[Komutu kullanan $username]\r\n$addTimestamp\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "L2o2ipBTSN": {
+                "id": "L2o2ipBTSN",
+                "isim": "Bdfd Timeout",
+                "bilgi": "Kullanıcıya timeout atar",
+                "kod": "\n[prefix]mute\r\n$argsCheck[>1;Lütfen susturmak istediğiniz birini etiketleyiniz.]\r\n$nomention \r\n$timeout[$mentioned[1];$noMentionMessage]\r\n$onlyPerms[manageroles;**Bu komudu kullanmak için yeterli yetkiye sahip değilsiniz**!]\r\n$title[**Susturma**]\r\n$color[#ff0000]\r\n$footer[$username tarafından susturuldu.]\r\n$description[\r\n\r\nSusturulan : <@$mentioned[<]>\r\nSusturan : <@$authorID>\r\nSebep : $noMentionMessage\r\n]\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "crlueD26Yg": {
+                "id": "crlueD26Yg",
+                "isim": "Bdfd Timeout",
+                "bilgi": "Kullanıcıya timeout atar",
+                "kod": "\n[prefix]mute\r\n$argsCheck[>1;Lütfen susturmak istediğiniz birini etiketleyiniz.]\r\n$nomention \r\n$timeout[$mentioned[1];$noMentionMessage]\r\n$onlyPerms[manageroles;**Bu komudu kullanmak için yeterli yetkiye sahip değilsiniz**!]\r\n$title[**Susturma**]\r\n$color[#ff0000]\r\n$footer[$username tarafından susturuldu.]\r\n$description[\r\n\r\nSusturulan : <@$mentioned[1]>\r\nSusturan : <@$authorID>\r\nSebep : $noMentionMessage\r\n]\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "iJ00D2i4AU": {
+                "id": "iJ00D2i4AU",
+                "isim": "Bdfd Butonlu Lock Unlock",
+                "bilgi": "Butonlu kanal kilitler kanalı açar",
+                "kod": "\n[prefix]kilit\r\n$nomention\r\n$addButton[no;kilitle;Kilitle;danger;no;🔒]\r\n$addButton[no;kilitaç;Kilit Aç;success;no;🔓]\r\n\r\n$color[#000000]\r\n$author[Kanalı Kilitlemek İstiyor musun $username ?]\r\n$authorIcon[$authorAvatar]\r\n$description[$thumbnail[$authorAvatar]]\r\n\r\n$onInteraction[kilitle]\r\n$nomention\r\n$modifyChannelPerms[$mentionedChannels[<;yes];-sendmessages;$roleID[@everyone]]\r\n$color[000000]\r\n$description[<#$mentionedChannels[<;yes]> Kanalı $username 'nin İsteği Üzerine Kilitledim. 🔒]\r\n$onlyIf[$message==;]\r\n\r\n\r\n$onInteraction[kilitaç]\r\n$nomention\r\n$modifyChannelPerms[$mentionedChannels[<;yes];+sendmessages;$roleID[@everyone]]\r\n$color[000000]\r\n$description[<#$mentionedChannels[<;yes]> Kanalın kilidini $username 'nin İsteği Üzerine Açtım 🔓]\r\n$onlyIf[$message==;]\r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "UYd7RWs2i0": {
+                "id": "UYd7RWs2i0",
+                "isim": "Bdfd Butonlu Avatar",
+                "bilgi": "Butonlu Avatar",
+                "kod": "\n[prefix]butonlu-avatar\r\n$nomention\r\n$botTyping\r\n$replyIn[2s]\r\n$reply\r\n$if[$isNumber[$message[1]]==true]\r\n$if[$userExists[$message[1]]==true]\r\n$title[ $username[$message[1]]#$discriminator[$message[1]]]\r\n$color[#ffee55]\r\n$image[$userAvatar[$message[1]]?size=1024]\r\n$addButton[yes;$userAvatar[$message[1]]?size=1024;Avatarı İndir;link;no;]\r\n$endif\r\n$endif\r\n$if[$isNumber[$message[1]]==false]\r\n$if[$userExists[$mentioned[1;yes]]==true]\r\n$title[Avatar ; $username[$mentioned[1;yes]]#$discriminator[$mentioned[1;yes]]]\r\n$color[#ffee55]\r\n$image[$userAvatar[$mentioned[1;yes]]?size=1024]\r\n$addButton[yes;$userAvatar[$mentioned[1;yes]]?size=1024; Avatarı İndir;link;no;]\r\n$endif\r\n$endif\r\n$if[$isNumber[$message[1]]==true]\r\n$if[$userExists[$message[1]]==false]\r\n$title[$username. The data provided (The ID) is not valid]\r\n$color[#ffee55]\r\n$endif\r\n$endif\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "1al710TaVu": {
+                "id": "1al710TaVu",
+                "isim": "Bdfd Link Engel",
+                "bilgi": "Link Engeller Linklerin Önemli Yerlerini Kendiniz Ekleyebilirsiniz",
+                "kod": "\n{prefix}link-engel aç\r\n$nomention\r\n$color[$random[1;999999]]\r\n$description[**$username Başarıyla Link Engel Sistemini AçtınıZ**]\r\n$setServerVar[linkengel;Açık]\r\n$onlyIf[$getServerVar[linkengel]!=Açık;Link engel Sistemi Zaten Açık]\r\n$onlyPerms[admin;**Bu Komutu Kullanmak İçin `Yönetici` İznin Olmalı**]\r\n$addTimestamp  \r\n\r\n\r\n{prefix}link-engel kapat \r\n$nomention\r\n$color[$random[1;999999]]\r\n$description[**$username Başarıyla Link Engel Sistemini Kapalı**]\r\n$setServerVar[linkengel;Kapalı]\r\n$onlyIf[$getServerVar[linkengel]!=Kapalı;Link engel Sistemi Zaten Kapalı]\r\n$onlyPerms[admin;**Bu Komutu Kullanmak İçin `Yönetici` İznin Olmalı**]\r\n$addTimestamp  \r\n\r\n\r\nhttps://\r\n$nomention\r\n$onlyIf[$isAdmin[$authorID]!=ture;]\r\n$enabled[$getServerVar[linkengel];]\r\n$color[$random[1;999999]]\r\n$description[**$username Sunucuda Link Atamazsın Link Engel Açık**]\r\n$deletecommand  \r\n\r\n\r\ndiscord.gg/\r\n$nomention\r\n$onlyIf[$isAdmin[$authorID]!=ture;]\r\n$enabled[$getServerVar[linkengel];]\r\n$color[$random[1;999999]]\r\n$description[**$username Sunucuda Link Atamazsın Link Engel Açık**]\r\n$deletecommand  \r\n\r\n\r\nVariables :\r\nlinkengel : boş ",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "8YZWrHlAO5": {
+                "id": "8YZWrHlAO5",
+                "isim": "Bdfd Küfür Engel ",
+                "bilgi": "Küfür engelller Not: a komudunu kopyalayın küfürler için ayrı komutlar açın ",
+                "kod": "\n(prefix)küfür-engel \r\n$nomention\r\n$if[$isAdmin[$authorID]==false]\r\nBu komutu kullanabilmek için `Yönetici` yetkisine sahip olman gerekiyor.\r\n$else\r\n$if[$checkCondition[$checkContains[$toLowercase[$message];aç;kapat]==true]==false]\r\n$if[$getServerVar[küfürengel]==no]\r\nKüfür engel komutu şu an kapalı, açmak için `(prefix)küfür-engel aç`\r\n$else\r\nKüfür engel komutu şu an açık, kapatmak için `(prefix)küfür-engel kapat`\r\n$endif\r\n$else\r\n$if[$toLowercase[$message]==aç]\r\n$title[Küfür engel filtresi açıldı!]\r\n$color[1]\r\n$setServerVar[küfürengel;yes]\r\n$else\r\n$if[$toLowercase[$message]==kapat]\r\n$title[Küfür engel filtresi kapatıldı!]\r\n$color[1]\r\n$setServerVar[küfürengel;no]\r\n$endif\r\n$endif\r\n$endif\r\n$endif\r\n\r\n\r\na\r\n$nomention\r\n$onlyIf[$checkContains[a$message;aq;amcık;amk;amg;amq;ananı s;anskm]==true;]\r\n$deletecommand\r\nBu sunucuda küfür filtresi bulunmakta.\r\n$deleteIn[5s]\r\n$onlyIf[$isAdmin[$authorID]!=true;]\r\n$enabled[$getServerVar[küfürengel];]\r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "gtztL7ROgT": {
+                "id": "gtztL7ROgT",
+                "isim": "Bdfd hg-bb",
+                "bilgi": "Bdfd hg bb kodudur",
+                "kod": "\n(prefix)giriş-çıkış-kapat\r\n$nomention\r\n$title[**Giriş Çıkış Kapandı.**]\r\n$onlyAdmin[Bu komut için `Yönetici` iznine sahip olman gerek.]\r\n\r\n$setServerVar[giriş; ]\r\n$setServerVar[çıkış; ]\r\n\r\n\r\n(prefix)giriş-çıkış-ayarla\r\n$nomention\r\n$onlyAdmin[Bu komut için `Yönetici` iznine sahip olnalısın.]\r\n$title[**Giriş Kanalı Ayarlandı**]\r\n$description[\r\nGiriş kanalı olarak <#$mentionedChannels[1]> ayarlandı.]\r\n$footerIcon[$authorAvatar]\r\n$footer[$username#$discriminator[$authorID] | Ayarladı.]\r\n$onlyIf[$message!=$noMentionMessage;Bir kanal etiketlemen gerekiyor.]\r\n\r\n$setServerVar[giriş;$mentionedChannels[1]]\r\n$setServerVar[çıkış;$mentionedChannels[1]]\r\n\r\n\r\n$onLeave[$getServerVar[çıkış]]\r\n$nomention \r\n$title[$username#$discriminator[$authorID] Sunucudan ayrıldı.]\r\n\r\n\r\n$onJoined[$getServerVar[giriş]]\r\n$title[$username#$discriminator[$authorID] Sunucuya katıldı.]\r\n\r\n\r\nDeğişkenler : \r\ngiriş : \r\nçıkış : \r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "m9oUvLIZ4G": {
+                "id": "m9oUvLIZ4G",
+                "isim": "Bdfd say",
+                "bilgi": "Kısaca sunucu bilgilerini gösterir ",
+                "kod": "\n{prefix}say\r\n$nomention\r\n$description[**Sunucunda Toplamda**\r\n`$membersCount` **Kişi Bulunuyor.**;1]\r\n$footer[İşte Sunucundaki Kişi Sayısı;1]\r\n$color[#711a56;1]\r\n$footerIcon[$authorAvatar;1] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Styles †",
+                "date": "5/19/2022"
+            },
+            "uCWscM4uXj": {
+                "id": "uCWscM4uXj",
+                "isim": "Bdfd Ayrıl",
+                "bilgi": "Bot sunucudan ayrılır",
+                "kod": "\n$nomention\r\n$botLeave\r\n$onlyForIDs[ID niz;Bu Komutu Sadece Sahibim Kullanabilir] \r\n\r\nİdniz olan kısma id girin.\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy ¿",
+                "date": "5/19/2022"
+            },
+            "momt9eGYAW": {
+                "id": "momt9eGYAW",
+                "isim": "Yaş hesapla",
+                "bilgi": "Kod bizim galiba ama yaş hesapliyo",
+                "kod": "\n$nomention \r\n$description[<@$authorID>**, Yıl Olarak `$sub[2022;$message]` Yaşındasınız**] \r\n$footer[$username Yaşına Baktı] \r\n$color[$random[0;999999]] \r\n$addTimestamp \r\n$footerIcon[$userAvatar[$authorID]] \r\n$argsCheck[>1;Doğum Yılınızı Giriniz] \r\n\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy ¿",
+                "date": "5/19/2022"
+            },
+            "3q4z1PvNqt": {
+                "id": "3q4z1PvNqt",
+                "isim": "Fake ip çalma",
+                "bilgi": "Eğlence komutu",
+                "kod": "\n$nomention\r\n$title[ Fake İp ] \r\n$description[**$username** , Fake İp'in Hazırlanıyor....] $editIn[10s;**<@$authorID> Fake İp'in** | $random[100;999].$random[500;900].$random[46;93]__] \r\n$color[ff0000] \r\n$footer[$username#$discriminator[$authorID] Komutumu Kullandı.] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy ¿",
+                "date": "5/19/2022"
+            },
+            "ezP7cDEb16": {
+                "id": "ezP7cDEb16",
+                "isim": "Rastgele Emoji",
+                "bilgi": "Rastgele Emoji atar",
+                "kod": "\n$nomention \r\n$title[**Rasgele Emojiler**] \r\n$description[rasgele emoji mi istiyorsun?] $editIn[4s;$randomText[😀;😁;😂;🤣;😃;😄;😅;😆;😉;😊;😋;😎;😍;😘;😗;😙;😚;☺;🙂;🤗;🤩;🤔;🤨;😐;😑;😶;🙄;😏]] \r\n$footer[$username kullandı] \r\n$color[FFFFF] \r\n$footerIcon[$authorAvatar] \r\n$addTimestamp \r\n$cooldown[5s;biraz yavaşlaman gerekmektedir.] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy ¿",
+                "date": "5/19/2022"
+            },
+            "pL1d9poAKA": {
+                "id": "pL1d9poAKA",
+                "isim": "8 Ball",
+                "bilgi": "Rastgele cevap verir ",
+                "kod": "\n$nomention \r\n$title[8 Ball] $description[$randomText[Bencede;Hayır;Katılmıyorum;Evet;Katılıyorum;Asla;Belki;Herhalde;Bilmiyorum;Olabilir]] \r\n$footer[$username#$discriminator[$authorID] Komutumu Kullandı] \r\n$argsCheck[>1;Bir Soru Sor!] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy ¿",
+                "date": "5/19/2022"
+            },
+            "64xoxOGbba": {
+                "id": "64xoxOGbba",
+                "isim": "IQ seviyesi",
+                "bilgi": "IQ seviyesi ölçer.",
+                "kod": "\n$nomention \r\n$title[**IQ SEVİYESİ**] \r\n$description[**`$username[$mentioned[1]]`** Adlı Kişinin İQ Seviyesi **$randomText[10;20;30;40;50;60;70;80;90;100;120;140;200;500**'Dır.]] \r\n$footer[$username Kullandı] \r\n$addTimestamp \r\n$allowMention \r\n$argsCheck[>1;İQ Seviyesine Bakmak İstediğin Kişiyi Etiketle] \r\n$footerIcon[$authorAvatar] \r\n$color[FF0000] \r\n$cooldown[5s;5 Saniye Sonra Tekrar Dene]\r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy ¿",
+                "date": "5/19/2022"
+            },
+            "0syXoY1syV": {
+                "id": "0syXoY1syV",
+                "isim": "Bdfd yapımcım kim?",
+                "bilgi": "Yapımcı kim kodu",
+                "kod": "\n$nomention \r\n$title[Yapımcım <@IDNİZ> ($username[İDNİZ]#$discriminator[IDNİZ])] \r\n$description[Beni Sunucuna Davet Etmek İçin Buraya [Tıkla]($getBotInvite)] \r\n",
+                "rank": "bdfd",
+                "dcisim": "Crafy ¿",
+                "date": "5/19/2022"
+            },
+            "iOejPlhAiH": {
+                "id": "iOejPlhAiH",
+                "isim": "Bdfd Kod Paylaş",
+                "bilgi": "Kod Paylaşır",
+                "kod": "\n$nomention\r\n$argsCheck[>1;**Lütfen Kanal Adı Gir**]\r\n$description[**Yeni ``BDFD`` Odası Açıldı**]\r\n$footer[BDFD Kod Paylaşım]\r\n$color[#00E9FF]\r\n$createChannel[$message;text;$channelID[BURAYA KANAL İSMİNİ KOY !]]",
+                "rank": "bdfd",
+                "dcisim": "Ɨ YusufResist",
+                "date": "5/21/2022"
+            },
+            "4Cu01HC3Ds": {
+                "id": "4Cu01HC3Ds",
+                "isim": "Bdfd İsim Değiş",
+                "bilgi": "Etiketlenen Kişinin Yazılan İsmi Yeni İsim Olarak Koyulur",
+                "kod": "\n$nomention\r\n$title[**YENİ İSİM**]\r\n$changeUsername[$noMentionMessage]\r\n$description[\r\n\r\n📊 İsim Başarıyla Değişti 📊\r\n\r\nİsmi Değiştiren Yetkili | $username\r\n\r\nİsmi Değişen Kişi | <@$mentioned[1]>\r\n\r\nYeni İsmi | $noMentionMessage]\r\n\r\n$footer[Komudu Kullanan = $username]\r\n$color[$random[0;999999]]",
+                "rank": "bdfd",
+                "dcisim": "Ɨ YusufResist",
+                "date": "5/21/2022"
+            },
+            "Gdu8LeByl6": {
+                "id": "Gdu8LeByl6",
+                "isim": "Bos Kes Komutu",
+                "bilgi": "Bdfd İçin Boş Keserek Para Alma Komutu",
+                "kod": "\n$nomention\r\n$description[$randomText[🐉 Ejderha Avladın Tebrikler ; 👹 İblis Avladın Tebrikler ; 🧙‍♂️ Büyücü Avladın Tebrikler ; 👽 Uzaylı Avladın Tebrikler] **$random[1;100]** Para Kazandın.]\r\n \r\n$setVar[para;$sum[$getVar[para;$authorID];$random[1;100]];$authorID]\r\n\r\nGerekli Değişkenler :\r\n\r\npara\r\nDeğer : 0\r\n",
+                "rank": "bdfd",
+                "dcisim": "[ ʙᴋꜰ] !Lider - i Milliyetçi✯",
+                "date": "5/21/2022"
+            },
+            "cJgaOSZm7t": {
+                "id": "cJgaOSZm7t",
+                "isim": "Günlük",
+                "bilgi": "Bu Kod Ekonomi Botlarında Yeni Başlayan Kullanıcılara Para Verilmesi İçin Gayet Uygun ",
+                "kod": "\n$nomention\r\n$description[ 🏆 | Günlük Para Hediyen \r\n\r\n\r\n💵 | Envanterine 250  Para Eklendi !\r\n]\r\n$setVar[para;$sum[$getVar[para;$authorID];250];$authorID]\r\n$cooldown[24h;Üzgünüm , Bir Sonraki Ödülün İçin 24 Saat Beklemen Gerekecek !]",
+                "rank": "bdfd",
+                "dcisim": "[ ʙᴋꜰ] !Lider - i Milliyetçi✯",
+                "date": "5/21/2022"
+            },
+            "JMoarrwhc8": {
+                "id": "JMoarrwhc8",
+                "isim": "Çalış",
+                "bilgi": "Klasik Para Kazanmak İçin Çalışma Komutu ",
+                "kod": "\n$nomention\r\n$description[ **$randomText[ Çöpçülük Yaparak  ; Grafik Tasarımcılığı Yaparak; Textilde Çalıştın ; Uber Şöförlüğü Yaparak ; Mimarlık Yaparak;  Kuyumculuk Yaparak] **  **$random[10;500]** Para Kazandın.]\r\n \r\n$setVar[para;$sum[$getVar[para;$authorID];$random[10;500]];$authorID]\r\n$footer[Çalış Komutu Kullanıldı !]\r\n$cooldown[1m;**Yavaş Olmalısın!**]\r\n",
+                "rank": "bdfd",
+                "dcisim": "[ ʙᴋꜰ] !Lider - i Milliyetçi✯",
+                "date": "5/21/2022"
+            },
+            "FHPul9SZIS": {
+                "id": "FHPul9SZIS",
+                "isim": "Maden Kaz",
+                "bilgi": "Bdfd İçin Maden Kazarak Ve Onları Satarak Para Kazanma Komutu",
+                "kod": "\n$nomention\r\n$title[Madende Çalıştın]\r\n\r\n$description[\r\n⛏️ Madende **$random[1;20]** demir Buldun. \r\n Madende Bulduğun Demirleri Satmak İçin Bir yere gittin.\r\n\r\n\r\nMadenleri Sattın.\r\n\r\n$color[ff0000]\r\n$footer[Komutu Kullanan: $username]\r\n$addTimestamp\r\n **$random[1;500]** Para Elde Kazandın.]\r\n\r\n$setVar[para;$sum[$getVar[para;$authorID];$random[1;500]];$authorID ]",
+                "rank": "bdfd",
+                "dcisim": "[ ʙᴋꜰ] !Lider - i Milliyetçi✯",
+                "date": "5/21/2022"
+            },
+            "TQWNxqZiBo": {
+                "id": "TQWNxqZiBo",
+                "isim": "Timeout BDFD",
+                "bilgi": "Etiketlenen Kullanıcıya Timeout Atar",
+                "kod": "\n$nomention\r\n$color[$random[0;99999]]\r\n$author[Timeout Sistemi]\r\n$description[\r\n<@$mentioned[1]> adlı kullanıcıya $noMentionMessage timeout Başarı İle Verildi]\r\n\r\n$argsCheck[>2; <@$authorID>, birisini etiketlemelisin ve bir süre yazmalısın.]\r\n\r\n$onlyPerms[admin; <@$authorID>, Hata ! Bu Komutu Yönetici Komutu Olanlar Kullanabilir]\r\n\r\n$timeout[$noMentionMessage;$mentioned[1]]\r\n\r\n$suppressErrors  \r\n",
+                "rank": "bdfd",
+                "dcisim": "[ ʙᴋꜰ] !Lider - i Milliyetçi✯",
+                "date": "5/23/2022"
+            },
+            "8QXORHhzFl": {
+                "id": "8QXORHhzFl",
+                "isim": "Untimeout",
+                "bilgi": "Etiketlenen Kullanıcıdaki Timeout Kaldırır",
+                "kod": "\n$nomention\r\n$color[$random[0;99999]]\r\n$author[UnTimeout Sistemi]\r\n$description[\r\n<@$mentioned[1]> adlı kullanıcının timeout  kaldırıldı.]\r\n\r\n$argsCheck[>1; <@$authorID>, birisini etiketlemelisin.]\r\n\r\n$onlyPerms[admin; <@$authorID>, bu komutu sadece `Yönetici` iznine sahip olan kullanıcılar kullanabilir.]\r\n\r\n$untimeout[$mentioned[1]]\r\n\r\n$suppressErrors   \r\n",
+                "rank": "bdfd",
+                "dcisim": "[ ʙᴋꜰ] !Lider - i Milliyetçi✯",
+                "date": "5/23/2022"
+            },
+            "N6e6FG2lWd": {
+                "id": "N6e6FG2lWd",
+                "isim": "Kullanıcını Bilgi",
+                "bilgi": "...",
+                "kod": "\n$nomention\r\n$color[$random[0;99999]]\r\n$author[Kullanıcı Bilgileri]\r\n$authorIcon[$userAvatar[$mentioned[1;yes]]]\r\n$thumbnail[$userAvatar[$mentioned[1;yes]]]\r\n$description[\r\n\r\n• Kullanıcı İsmi: `$username[$mentioned[1;yes]]#$discriminator[$mentioned[1;yes]]`\r\n\r\n• Kullanıcı ID: `$mentioned[1;yes]`\r\n\r\n• Bot mu?: `$replaceText[$replaceText[$isBot[$mentioned[1;yes]];true; Evet;-1];false; Hayır;-1]`\r\n\r\n• Direkt Mesajlar: `$replaceText[$replaceText[$isUserDMEnabled[$mentioned[1;yes]];true; Açık;-1];false; Kapalı;-1]`\r\n\r\n• Sunucuya Katılma Tarihi:  `$userJoined[$mentioned[1;yes]]`\r\n\r\n• Hesap Oluşturulma Tarihi: `$creationDate[$mentioned[1;yes]]`\r\n]  \r\n",
+                "rank": "bdfd",
+                "dcisim": "[ ʙᴋꜰ] !Lider - i Milliyetçi✯",
+                "date": "5/23/2022"
+            }
+        }
+    }
+]

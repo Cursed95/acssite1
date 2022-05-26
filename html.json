@@ -1,0 +1,105 @@
+[
+    {
+        "kodlar": {
+            "Xzd4imiEkc": {
+                "id": "Xzd4imiEkc",
+                "isim": "Html oyun listesi",
+                "bilgi": "Oyun listesi",
+                "kod": "\n<html>\r\n  <head>\r\n    <title>Oyun Listesi</title>\r\n    <meta charset=\"utf-8\">\r\n                 </head>\r\n  <body>\r\n    <body bgcolor=\"cyan\">\r\n      <font color=\"red\">\r\n    <center>   <h1>\r\n    <b>En İyi Oyun Listesi</b>\r\n    </center>  </h1> </font>\r\n    <br>\r\n       <br>\r\n    \r\n    <ol>\r\n      <b>\r\n   <li>Pubg Mobile</li>\r\n   <br>\r\n   <li>Fornite</li>\r\n   <br>\r\n   <li>Dead By Daylight</li>\r\n   <br>\r\n     <li>Minecraft</li> \r\n     <br>\r\n     <li>Age Of History</li>\r\n</b>\r\n      \r\n    </ol>\r\n          <br>\r\n           <br>\r\n      <br>\r\n       <br>\r\n       <br>\r\n         <b> <button> <center>\r\n  Bloglar için tıkla <a href=\"link\">\r\n       </b> </button> </center> </a>\r\n    \r\n  </body>\r\n</html> \r\n",
+                "rank": "html",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/6/2022"
+            },
+            "wt69QUrDNN": {
+                "id": "wt69QUrDNN",
+                "isim": "Html yorum sistemi",
+                "bilgi": "Html yorum sistemi",
+                "kod": "\n<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <title></title>\r\n</head>\r\n\r\n<body>\r\n  \r\n  <table border=\"0\" cellSpacing=\"0\" cellPadding=\"0\" width=\"100%\" id=\"table1\">\r\n\r\n <tr>\r\n\r\n  <td vAlign=\"top\" width=\"98%\"><center>\r\n\r\n  <table border=\"0\" id=\"table2\">\r\n\r\n   <tr>\r\n\r\n    <td><b>Bu sayfa hakkındaki yorumlar:</b>\r\n\r\n    </td>\r\n\r\n   </tr>\r\n\r\n  </table>\r\n\r\n  <center><br>\r\n\r\n&nbsp;<form onsubmit=\"return wsx_ywait();\" method=\"post\" name=\"wsx_yuyelik\" action=\"\">\r\n\r\n   <table id=\"table3\">\r\n\r\n    <tr>\r\n\r\n     <td colSpan=\"20\" align=\"left\"><b>Bu sayfa hakkında yorum\r\n\r\n     ekle:</b>\r\n\r\n     </td>\r\n\r\n    </tr>\r\n\r\n    <tr>\r\n\r\n     <td align=\"left\">İsim\r\n\r\n     </td>\r\n\r\n     <td align=\"left\"><input size=\"25\" name=\"isim\">\r\n\r\n     </td>\r\n\r\n    </tr>\r\n\r\n    <tr>\r\n\r\n     <td align=\"left\">E-mail\r\n\r\n     </td>\r\n\r\n     <td align=\"left\">\r\n\r\n     <input size=\"25\" name=\"mail\" AUTOCOMPLETE=\"OFF\">\r\n\r\n     </td>\r\n\r\n    </tr>\r\n\r\n    <tr>\r\n\r\n     <td>Mesajınız:</td>\r\n\r\n     <td>\r\n\r\n     <textarea style=\"WIDTH: 250px; HEIGHT: 100px\" name=\"icerik\" rows=\"1\" cols=\"20\"></textarea></td>\r\n\r\n    </tr>\r\n\r\n   </table>\r\n\r\n   <input value=\"\" type=\"hidden\" name=\"page\">\r\n\r\n   <input value=\"\" type=\"hidden\" name=\"domain\">\r\n\r\n   <input value=\"30842\" type=\"hidden\" name=\"id\">\r\n\r\n   <input value=\"0\" type=\"hidden\" name=\"alt_id\">\r\n\r\n   <input value=\"0\" type=\"hidden\" name=\"alt_id1\">\r\n\r\n   <input value=\"index.html\" type=\"hidden\" name=\"dosya_ismi\">\r\n\r\n   <input value=\"Yorum ekle\" type=\"submit\">\r\n\r\n  </form>\r\n\r\n  </center></center></td>\r\n\r\n </tr>\r\n\r\n</table>\r\n\r\n\r\n</body>\r\n\r\n</html> \r\n\r\n",
+                "rank": "html",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/6/2022"
+            },
+            "BatnejFGN3": {
+                "id": "BatnejFGN3",
+                "isim": "Html belgesi",
+                "bilgi": "Html başlangıç belgesi",
+                "kod": "\n<!DOCTYPE html>\r\n\r\n<html>\r\n\r\n<head>\r\n\r\n<title>Ben tarayıcıda görünen başlık metniyim :)</title>\r\n\r\n</head>\r\n\r\n<body>\r\n\r\n<h1>Bu bir Başlık</h1>\r\n\r\n<p>Bu da benim ilk paragrafım. Merhaba HTML. Merhaba Dünya</p>\r\n\r\n</body>\r\n\r\n</html> \r\n",
+                "rank": "html",
+                "dcisim": "Crafy Rêcy",
+                "date": "5/6/2022"
+            },
+            "KiozG4llZY": {
+                "id": "KiozG4llZY",
+                "isim": "Html Meta Etiketleri",
+                "bilgi": "Html Meta Etiketleri ",
+                "kod": "\n<html>\r\n<head>\r\n<meta name=\"theme-color\" content=\"İstediğiniz Rengi Seçebilirsiniz.\">\r\n<meta charset=\"UTF-8\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n<meta name=\"author\" content=\"Buraya Kendi İsminizi Yazabilirsiniz.\">\r\n<meta name=\"title\" content=\"Buraya Sitenin İsmini Girebilirsiniz.\">\r\n<meta name=\"description\" content=\"Buraya Kendi Açıklamanızı Yazın.\">  \r\n</head>\r\n</html> \r\n",
+                "rank": "html",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "ktoKTFQVB2": {
+                "id": "ktoKTFQVB2",
+                "isim": "Html Hazır Menü ",
+                "bilgi": "Html Hazır Menü ",
+                "kod": "\n\r\n\r\nindex.html\r\n<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width\">\r\n  <title>istediğiniz başlık</title>\r\n  <link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n</head>\r\n\r\n<body>\r\n<header>\r\n  <nav>\r\n    <ul>\r\n<li><a href=\"#\">Anasayfa</a></li>\r\n<li><a href=\"#\">Projelerim</a></li>\r\n<li><a href=\"#\">Discord</a></li>\r\n    </ul>\r\n  </nav>\r\n</header>\r\n  <script src=\"script.js\"></script>\r\n</body>\r\n\r\n</html> \r\n\r\n\r\nstyle.css\r\n.wow {\r\n  width: 100px;\r\n}\r\n*{\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\nnav ul li{\r\n  display: inline-block;\r\n  margin: 27px;\r\n}\r\nnav ul li a{\r\n  text-decoration: none;\r\n  color: white;\r\n  transition: color(0.3), background-color(0.3);\r\n}\r\nnav{\r\n  background-color: black;\r\n}\r\nbody{\r\n  background-color: rgb(56,56,56)\r\n}\r\nnav ul li a:hover{\r\n  background-color: white;\r\n  color: black;\r\n}\r\n",
+                "rank": "html",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "IimQz5U9JV": {
+                "id": "IimQz5U9JV",
+                "isim": "Html Resim Yükleme ",
+                "bilgi": "Resim ismine resminizin ismi.uzantısı olcak şekilde yazın.",
+                "kod": "\nindex.html\r\n<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width\">\r\n  <title>istediğiniz başlık</title>\r\n  <link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n</head>\r\n\r\n<body>\r\n<header>\r\n  <nav>\r\n    <ul>\r\n<li><a href=\"#\">Anasayfa</a></li>\r\n<li><a href=\"#\">Projelerim</a></li>\r\n<li><a href=\"#\">Discord</a></li>\r\n    </ul>\r\n  </nav>\r\n</header>\r\n  <script src=\"script.js\"></script>\r\n</body>\r\n\r\n</html> \r\n",
+                "rank": "html",
+                "dcisim": "Styles",
+                "date": "5/8/2022"
+            },
+            "TwUHvYrMlY": {
+                "id": "TwUHvYrMlY",
+                "isim": "HTML Analog Saat ",
+                "bilgi": "Candy'den Alınmıştır ",
+                "kod": "\n<!DOCTYPE html>\r\n<html>\r\n<body>\r\n \r\n<canvas id=\"canvas\" width=\"300\" height=\"300\" style=\"background-color:#333\"></canvas>\r\n \r\n<script>\r\nvar canvas = document.getElementById(\"canvas\");\r\nvar ctx = canvas.getContext(\"2d\");\r\nvar radius = canvas.height / 2;\r\nctx.translate(radius, radius);\r\nradius = radius * 0.90\r\nsetInterval(drawClock, 1000);\r\n \r\n \r\nfunction drawClock() {\r\n    drawFace(ctx, radius);\r\n    drawNumbers(ctx, radius);\r\n    drawTime(ctx, radius);\r\n}\r\nfunction drawFace(ctx, radius) {\r\n    var grad;\r\n \r\n    ctx.beginPath();\r\n    ctx.arc(0, 0, radius, 0, 2*Math.PI);\r\n    ctx.fillStyle = 'white';\r\n    ctx.fill();\r\n \r\n    grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);\r\n    grad.addColorStop(0, '#333');\r\n    grad.addColorStop(0.5, 'white');\r\n    grad.addColorStop(1, '#333');\r\n    ctx.strokeStyle = grad;\r\n    ctx.lineWidth = radius*0.1;\r\n    ctx.stroke();\r\n \r\n    ctx.beginPath();\r\n    ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);\r\n    ctx.fillStyle = '#333';\r\n    ctx.fill();\r\n}\r\nfunction drawNumbers(ctx, radius) {\r\n    var ang;\r\n    var num;\r\n    ctx.font = radius*0.15 + \"px arial\";\r\n    ctx.textBaseline=\"middle\";\r\n    ctx.textAlign=\"center\";\r\n    for(num= 1; num < 13; num++){\r\n        ang = num * Math.PI / 6;\r\n        ctx.rotate(ang);\r\n        ctx.translate(0, -radius*0.85);\r\n        ctx.rotate(-ang);\r\n        ctx.fillText(num.toString(), 0, 0);\r\n        ctx.rotate(ang);\r\n        ctx.translate(0, radius*0.85);\r\n        ctx.rotate(-ang);\r\n    }\r\n}\r\nfunction drawTime(ctx, radius){\r\n    var now = new Date();\r\n    var hour = now.getHours();\r\n    var minute = now.getMinutes();\r\n    var second = now.getSeconds();\r\n    //hour    hour=hour%12;\r\n    hour=(hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));\r\n    drawHand(ctx, hour, radius*0.5, radius*0.07);\r\n    //minute    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));\r\n    drawHand(ctx, minute, radius*0.8, radius*0.07);\r\n    // second    second=(second*Math.PI/30);\r\n    drawHand(ctx, second, radius*0.9, radius*0.02);\r\n}\r\n \r\nfunction drawHand(ctx, pos, length, width) {\r\n    ctx.beginPath();\r\n    ctx.lineWidth = width;\r\n    ctx.lineCap = \"round\";\r\n    ctx.moveTo(0,0);\r\n    ctx.rotate(pos);\r\n    ctx.lineTo(0, -length);\r\n    ctx.stroke();\r\n    ctx.rotate(-pos);\r\n}\r\n</script>\r\n \r\n</body>\r\n</html>\r\n",
+                "rank": "html",
+                "dcisim": "Styles",
+                "date": "5/16/2022"
+            },
+            "3M7a84o7z1": {
+                "id": "3M7a84o7z1",
+                "isim": "HTML Açılır Kapanır Menü ",
+                "bilgi": "Candy'den Alınmıştır ",
+                "kod": "\n<ul class=\"mobmen\" id=\"mymobmen\">\r\n  <li><a href=\"#\" style=\"font:normal 30px Cookie,cursive;\"><i class=\"fa fa-home\"></i> Anasayfa</a></li>\r\n  <li><a href=\"#\" style=\"font:normal 30px Cookie,cursive;\"><i class=\"fa fa-cogs\"></i> Komutlar</a></li>\r\n  <li>\r\n  <li class=\"icon\">\r\n    <a href=\"javascript:void(0);\" onclick=\"ackapa()\">&#9776;</a>\r\n  </li>\r\n</ul>\r\n",
+                "rank": "html",
+                "dcisim": "Styles",
+                "date": "5/16/2022"
+            },
+            "hvViv1IzA6": {
+                "id": "hvViv1IzA6",
+                "isim": "HTML Site Footerı",
+                "bilgi": "Candy'den Alınmıştır ",
+                "kod": "\n<footer class=\"footer-develop\">\r\n \r\n<div class=\"footer-left\">\r\n \r\n<h3>Charons</h3>\r\n \r\n \r\n<a href=\"#\">Ana Sayfa</a>\r\n·\r\n<a href=\"#\">Destek sunucusu</a>\r\n·\r\n<a href=\"#\">Hakkımızda</a>\r\n·\r\n<a href=\"#\">S.S.S</a>\r\n·\r\n<a href=\"#\">İletişim</a>\r\n.\r\n<a href=\"#\">Davet et</a>\r\n \r\n \r\n© Charons Tüm hakları saklıdır\r\n</div>\r\n \r\n \r\n<div class=\"footer-center\">\r\n \r\n<div>\r\n<i class=\"fa fa-map-marker\"></i>\r\n \r\n<span>Yakında</span>\r\n</div>\r\n \r\n \r\n<div>\r\n<i class=\"fa fa-phone\"></i>\r\n \r\nYakında\r\n</div>\r\n \r\n \r\n<div>\r\n<i class=\"fa fa-envelope\"></i>\r\n \r\n<a href=\"\">Yakında</a>\r\n</div>\r\n \r\n</div>\r\n \r\n \r\n<div class=\"footer-right\">\r\n \r\n<span>Hakkımızda</span>\r\nDevelop code shere Tarafından yapıldı, Charons' teslim edildi. Botu davet etmeyi, sunucuya katılmayı unutmayın, böylece bize destek olabilirsiniz...\r\n \r\n <a style=\"background-color:#333;padding:5px;border-radius:5px;border:1px black solid;font-size:50px;display:scroll;position:fixed;bottom:5px;right:5px;\" href=\"#\" title=\"Yukarı çık\"><i class=\"fa fa-arrow-up\"></i></a>\r\n<div class=\"footer-icons\">\r\n<a href=\"#\"><i class=\"fa fa-youtube\"></i></a>\r\n<a href=\"#\"><i class=\"fa fa-code\"></i></a>\r\n<a href=\"#\"><i class=\"fa fa-github\"></i></a>\r\n</div>\r\n \r\n</div>\r\n \r\n</footer>\r\n",
+                "rank": "html",
+                "dcisim": "Styles",
+                "date": "5/16/2022"
+            },
+            "uI8wnzTEkp": {
+                "id": "uI8wnzTEkp",
+                "isim": "HTML Yan Yana Class Koyma",
+                "bilgi": "Candy'den Alınmıştır ",
+                "kod": "\n<div class=\"menu\">\r\n<b>Moderasyon(17)</b><br>\r\nKüfür-engel,Link-engel,saas,muterol<br>\r\nyavaş-mod,botgiriş,kick,mute,ban<br>kilit,kilit-aç...\r\n</div><div class=\"menu\"><b>Ticket(5)</b><br>\r\nticket kanal ayarla/sıfırla<br>\r\nticketkategori ayarla/sıfırla<br>\r\nticketkapat</div><div class=\"menu\"><b>Kullanıcı(7)</b><br>\r\nafk,yetkilerim, function, i<br>\r\nkullanıcıbilgi, sunucubilgi, rolbilgi<br>\r\n</div><div class=\"menu\"><b>Müzik(7)</b><br>\r\nplay,volume,pause<br>\r\nresume, skip<br>\r\nqueue, dc\r\n</div>\r\n",
+                "rank": "html",
+                "dcisim": "Styles",
+                "date": "5/16/2022"
+            },
+            "rsque3gqaB": {
+                "id": "rsque3gqaB",
+                "isim": "HTML Link Yönlendirme",
+                "bilgi": "Candy'den Alınmıştır ",
+                "kod": "\n  <body onload=\"redirect()\">\r\n  <script>\r\n  function redirect() {\r\n  window.location='link';\r\n  }\r\n  </script>\r\n  </body> \r\n",
+                "rank": "html",
+                "dcisim": "Styles",
+                "date": "5/16/2022"
+            }
+        }
+    }
+]

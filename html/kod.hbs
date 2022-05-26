@@ -1,0 +1,39 @@
+{{#if kod}}
+<head> 
+    <style> 
+    .deneme2 {
+  width: 720px;
+  position: relative;
+  left: 50%;
+  margin-left: -360px;
+}
+    </style> 
+</head> 
+<br>
+<main>
+<div class="container">
+<center>
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">{{kod.isim}}</h1>
+      <p class="fs-5">{{kod.bilgi}}</p>
+  <p class="fs-5">Paylaşan: {{kod.dcisim}}</p>
+  <p class="fs-5">Tarih: {{kod.date}}</p>
+</center>
+      <br>
+  <div class="border border-light">
+        <pre><code id="metin" style="color:white; position: relative; left: 10px;"><span class="mail">{{kod.kod}}</span></code></pre>
+  </div><br>
+  <button styles="text-align:center" class="btn btn-outline-light" onclick="kopyala('metin')">Kodu Kopyala</button>
+  {{/if}}
+  <script>
+function kopyala(id)
+{
+var r = document.createRange();
+r.selectNode(document.getElementById(id));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(r);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+alert("Kod Başarıyla Kopyalandı");
+}
+  </script>
